@@ -1,9 +1,13 @@
 import { AppBar, Box, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 
-const pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQs'];
+export interface NavbarProps{
+  pages?: string[];
+};
 
-export default function NavBar() {
-    <Box>
+export default function NavBar({ 
+  pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQs']}: NavbarProps) {
+    return(
+  <Box>
         <AppBar position="static">
             <Toolbar>
             <Menu
@@ -27,4 +31,5 @@ export default function NavBar() {
             </Toolbar>
         </AppBar>
     </Box>
+    )
 }

@@ -4,7 +4,8 @@ export interface NavbarProps{
     pages?: string[];
 };
 
-export const NavBar=({ pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQs']}: NavbarProps) => {
+export default function NavBar({ 
+    pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQs']}: NavbarProps) {
     return(
     <Box>
         <AppBar position="static">
