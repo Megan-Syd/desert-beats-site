@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, SxProps } from "@mui/material";
 import { ReactNode } from "react";
 
 interface CardContainerProps {
-    title: string;
+    title?: string;
     subtitle?: string;
     sx?:SxProps;
     children: ReactNode;
@@ -17,7 +17,7 @@ export default function CardContainer({
 }: CardContainerProps) {
     return (
         <Card
-        sx={{}}>
+        sx={{ margin: '10px'}}>
         <CardHeader title={title} subtitle={subtitle} />
         <CardContent
         sx={{}} >
