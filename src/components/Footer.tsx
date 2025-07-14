@@ -3,7 +3,7 @@ import { Box, Divider, Icon, Stack, Typography } from "@mui/material";
 export default function Footer() {
     return(
         <Box
-        sx={{ backgroundColor: 'green',
+        sx={{ backgroundColor: '#5e0435',
         color: 'whitesmoke',
         padding: '30px'}}>
             <Stack direction="row"
