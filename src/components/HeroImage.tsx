@@ -1,31 +1,38 @@
 import { Box, Typography, Button } from "@mui/material";
+import { ReactNode } from "react";
 
-export default function HeroImage() {
+export interface HeroImageProps{
+  title?: string;
+  backgroundImageUrl?: string;
+  children?: ReactNode;
+}
+
+export default function HeroImage({title, backgroundImageUrl, children}: HeroImageProps) {
     return (
         <Box
         sx={{
-            height: '100vh',
-            backgroundImage: `url('/path/to/your/image.jpg')`,
+            height: '50vh',
+            backgroundImage: `url(${backgroundImageUrl || '###'})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: 'white',
+            color: 'whitesmoke',
             textAlign: 'center',
             position: 'relative',
           }}
           >
             <Box sx={{ zIndex: 2, maxWidth: 800, px: 3 }}>
         <Typography variant="h2" component="h1" gutterBottom>
-          Welcome to Our Website
+          {title}
         </Typography>
-        <Typography variant="h5" paragraph>
-          Discover amazing content, services, or products that we offer.
+        <Typography variant="h5">
+          {children}
         </Typography>
-        <Button variant="contained" size="large" color="primary">
+        {/* <Button variant="contained" size="large" color="primary">
           Get Started
-        </Button>
+        </Button> */}
       </Box>
 
         </Box>
