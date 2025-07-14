@@ -1,33 +1,27 @@
-import { AppBar, Box, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+'use client';
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 
 export interface NavbarProps{
-  pages?: string[];
+    pages?: string[];
 };
 
 export default function NavBar({ 
-  pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQs']}: NavbarProps) {
+    pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQs']}: NavbarProps) {
     return(
-  <Box>
-        <AppBar position="static">
+    <Box>
+        <AppBar position="sticky" sx={{ backgroundColor: '#5e0435'}}>
             <Toolbar>
-            <Menu
-                    id="menu-appbar"
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'left',
-                    }}
-                    keepMounted
-                    transformOrigin={{
-                        vertical: 'top',
-                        horizontal: 'left',
-                    }}
-                    sx={{ display: { xs: 'block', md: 'none' } }} open={false}            >
-              {pages.map((page) => (
-                <MenuItem key={page}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+              <Typography variant="h5">Desert Beats Belly Dance</Typography>
+                <Box sx={{ display: 'flex', gap: 2, marginLeft: 'auto' }}>
+                    {pages.map((page) => (
+                    <Button key={page}
+                    sx={{ color: 'whitesmoke'}}
+                    onClick={() => console.log(`${page} clicked`)} 
+                    >
+                        {page}
+                    </Button>
+                    ))}
+                </Box>
             </Toolbar>
         </AppBar>
     </Box>
