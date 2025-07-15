@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata : Metadata = {
-    title: 'FAQs | Desert Beats',
+    title: 'FAQ | Desert Beats',
 }
 
 export default function FAQPage() {

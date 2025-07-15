@@ -43,7 +43,7 @@ export default function Footer() {
                                 { label: "About Us", href: "/about" },
                                 { label: "Classes", href: "/classes" },
                                 { label: "Gallery", href: "/gallery" },
-                                { label: "FAQs", href: "/faq" },
+                                { label: "FAQ", href: "/faq" },
                                 { label: "Contact", href: "/contact" },
                             ]}/>
                         </Box>
