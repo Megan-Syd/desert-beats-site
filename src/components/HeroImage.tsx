@@ -5,9 +5,11 @@ export interface HeroImageProps{
   title?: string;
   backgroundImageUrl?: string;
   children?: ReactNode;
+  buttonText?: string;
+  buttonOnClick?: () => void;
 }
 
-export default function HeroImage({title, backgroundImageUrl, children}: HeroImageProps) {
+export default function HeroImage({title, backgroundImageUrl, children, buttonText, buttonOnClick}: HeroImageProps) {
     return (
         <Box
         sx={{
@@ -30,9 +32,16 @@ export default function HeroImage({title, backgroundImageUrl, children}: HeroIma
         <Typography variant="h5">
           {children}
         </Typography>
-        {/* <Button variant="contained" size="large" color="primary">
-          Get Started
-        </Button> */}
+        {buttonText && (
+          <Button 
+          variant="contained" 
+          size="large" 
+          color="inherit" 
+          onClick={buttonOnClick} 
+          sx={{ color: '#2b2d2f'}}>
+            {buttonText}
+          </Button>
+        )}
       </Box>
 
         </Box>
