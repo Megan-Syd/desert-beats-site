@@ -1,7 +1,5 @@
 import Card from "@/components/Card";
-import Footer from "@/components/Footer";
 import HeroImage from "@/components/HeroImage";
-import NavBar from "@/components/NavBar";
 import { Grid, Paper, Typography } from "@mui/material";
 import { Metadata } from "next";
 
@@ -12,7 +10,6 @@ export const metadata : Metadata = {
 export default function ContactPage() {
     return (
         <>
-        <NavBar />
         <HeroImage title="Contact Us" backgroundImageUrl="/banner_images/banner01.JPG" />
         <Grid container spacing={2}>
             <Grid size={{ xs: 6, md: 4}}>
@@ -36,7 +33,6 @@ export default function ContactPage() {
                 </Paper>
             </Grid>
         </Grid>
-        <Footer />
         </>
     )
 }

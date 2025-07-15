@@ -1,14 +1,10 @@
-import Image from "next/image";
 import { Box, Container, Grid, Typography } from "@mui/material";
-import NavBar from "@/components/NavBar";
 import HeroImage from "@/components/HeroImage";
 import Card from "@/components/Card";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-    <NavBar />
     <HeroImage title="Desert Beats" backgroundImageUrl="/banner_images/banner02.jpg" />
     <Container maxWidth='md'>
       <Card title={"Welcome to Desert Beats"}
@@ -34,7 +30,6 @@ export default function Home() {
         <Typography>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, rerum? Nihil adipisci repudiandae tempora, saepe excepturi facere hic rem. Inventore necessitatibus voluptas reprehenderit iste dolores earum perferendis consectetur ducimus fugiat?</Typography>
       </Card>
     </Container>
-    <Footer />
     </>
       );
 }
