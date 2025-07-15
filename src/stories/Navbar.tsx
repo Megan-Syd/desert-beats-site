@@ -5,7 +5,7 @@ export interface NavbarProps{
 };
 
 export default function NavBar({ 
-    pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQs']}: NavbarProps) {
+    pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQ']}: NavbarProps) {
     return(
     <Box>
         <AppBar position="static">
