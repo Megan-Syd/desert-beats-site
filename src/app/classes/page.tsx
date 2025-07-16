@@ -2,7 +2,7 @@ import AppAccordion from "@/UI/AppAccordion";
 import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent, CardHeader, CardMedia, Container, Grid, Typography } from "@mui/material";
 import { Metadata } from "next";
 import { MdExpandMore } from "react-icons/md";
 
@@ -58,6 +58,26 @@ export default function ClassesPage() {
                     ))}
                 </Box>
 
+                <Box>
+                    {[
+                        { title: 'Beginner', subheader: 'with Jodie', text: ''},
+                        { title: 'Oriental', subheader: 'with Melanie', text: ''},
+                        { title: 'Fusion', subheader: 'with Quinn', text: ''},
+                        { title: 'FCBD Style', subheader: 'with Quinn and Melanie', text: ''},
+                    ].map((item, index) => (
+                        <Card key={index}>
+                            <CardHeader
+                            title={item.title}
+                            subheader={item.subheader}
+                            />
+                            <CardContent>
+                                <Typography>{item.text}</Typography>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Box>
+
+{/* 'registrations open' headline */}
                 <Headline 
                 sx={{color: 'whitesmoke', padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}
                 title={"Registrations are open!"} 
