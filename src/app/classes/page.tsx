@@ -2,7 +2,7 @@ import AppAccordion from "@/UI/AppAccordion";
 import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardMedia, Container, Grid, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
 import { Metadata } from "next";
 import { MdExpandMore } from "react-icons/md";
 
@@ -13,10 +13,53 @@ export const metadata : Metadata = {
 export default function ClassesPage() {
     return (
         <>
-        <Container>
-            <HeroImage title="Classes" backgroundImageUrl="#"/>
+        <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner03.JPG"/>
 
-            <Box>
+        <Container>
+            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly'}}>
+            {[
+        { title: "Beginner", subtitle: "with Jodie", image: "/placeholder-square.png" },
+        { title: "Oriental", subtitle: "with Melanie", image: "/placeholder-square.png" },
+        { title: "Fusion", subtitle: "with Quinn", image: "/placeholder-square.png" },
+        { title: "FCBD Style", subtitle: "with Quinn and Melanie", image: "/placeholder-square.png" },
+      ].map((item, index) => (
+        <Card key={index}>
+            <Box
+            sx={{
+            position: "relative",
+            overflow: "hidden",
+            }}>
+                <CardMedia
+                    component="img"
+                    image={item.image}
+                    alt={item.title}
+                    sx={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: 'block'
+                    }}
+                />
+                <Box
+                sx={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                width: '100%',
+                // bgcolor: 'rgba(0, 0, 0, 0.54)',
+                color: 'white',
+                padding: '5px',
+                textAlign: 'center'
+            }}>
+                <Typography variant="h5">{item.title.toUpperCase()}</Typography>
+                <Typography variant="body1">{item.subtitle}</Typography>
+            </Box>
+            </Box>
+        </Card>
+      ))}            </Box>
+
+            {/* Alternative Accordion info display */}
+            {/* <Box>
                 <AppAccordion summary={"Beginner with Jodie"}>
                     <Typography>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis error corporis nulla reprehenderit nemo, veritatis illo saepe perferendis laudantium eius aliquid, ratione soluta facere, natus corrupti sapiente suscipit consequatur!
@@ -25,7 +68,7 @@ export default function ClassesPage() {
                 <AppAccordion summary={"Oriental with Melanie"} children={undefined}></AppAccordion>
                 <AppAccordion summary={"Fusion with Quinn"} children={undefined}></AppAccordion>
                 <AppAccordion summary={"FCBD style with Quinn & Melanie"} children={undefined}></AppAccordion>
-            </Box>
+            </Box> */}
 
             {/* Alternative 2-column info display */}
             {/* <Grid 
