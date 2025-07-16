@@ -10,7 +10,7 @@ export const metadata : Metadata = {
 export default function ContactPage() {
     return (
         <>
-        <HeroImage title="Contact Us" backgroundImageUrl="/banner_images/banner01.JPG" />
+        <HeroImage title="Contact Us" backgroundImageUrl="/banner_images/banner05.jpeg" />
         <Grid container spacing={2}>
             <Grid size={{ xs: 6, md: 4}}>
                 <Card title={"Get In Touch"}>
