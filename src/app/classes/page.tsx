@@ -13,50 +13,63 @@ export const metadata : Metadata = {
 export default function ClassesPage() {
     return (
         <>
-        <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner03.JPG"/>
+            <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner03.JPG"/>
 
-        <Container>
-            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly'}}>
-            {[
-        { title: "Beginner", subtitle: "with Jodie", image: "/placeholder-square.png" },
-        { title: "Oriental", subtitle: "with Melanie", image: "/placeholder-square.png" },
-        { title: "Fusion", subtitle: "with Quinn", image: "/placeholder-square.png" },
-        { title: "FCBD Style", subtitle: "with Quinn and Melanie", image: "/placeholder-square.png" },
-      ].map((item, index) => (
-        <Card key={index}>
-            <Box
-            sx={{
-            position: "relative",
-            overflow: "hidden",
-            }}>
-                <CardMedia
-                    component="img"
-                    image={item.image}
-                    alt={item.title}
-                    sx={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: 'block'
-                    }}
-                />
-                <Box
-                sx={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                width: '100%',
-                // bgcolor: 'rgba(0, 0, 0, 0.54)',
-                color: 'white',
-                padding: '5px',
-                textAlign: 'center'
-            }}>
-                <Typography variant="h5">{item.title.toUpperCase()}</Typography>
-                <Typography variant="body1">{item.subtitle}</Typography>
-            </Box>
-            </Box>
-        </Card>
-      ))}            </Box>
+            <Container>
+                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                    {[
+                        { title: "Beginner", subtitle: "with Jodie", image: "/placeholder-square.png" },
+                        { title: "Oriental", subtitle: "with Melanie", image: "/placeholder-square.png" },
+                        { title: "Fusion", subtitle: "with Quinn", image: "/placeholder-square.png" },
+                        { title: "FCBD Style", subtitle: "with Quinn and Melanie", image: "/placeholder-square.png" },
+                    ].map((item, index) => (
+                        <Card key={index}>
+                            <Box
+                            sx={{
+                            position: "relative",
+                            overflow: "hidden",
+                            }}>
+                                <CardMedia
+                                    component="img"
+                                    image={item.image}
+                                    alt={item.title}
+                                    sx={{
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "cover",
+                                    display: 'block'
+                                    }}
+                                />
+                                <Box
+                                sx={{
+                                position: 'absolute',
+                                bottom: 0,
+                                left: 0,
+                                width: '100%',
+                                color: 'white',
+                                padding: '5px',
+                                textAlign: 'center'
+                                }}>
+                                    <Typography variant="h5">{item.title.toUpperCase()}</Typography>
+                                    <Typography variant="body1">{item.subtitle}</Typography>
+                                </Box>
+                            </Box>
+                        </Card>
+                    ))}
+                </Box>
+
+                <Headline 
+                sx={{color: 'whitesmoke', padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}
+                title={"Registrations are open!"} 
+                subtitle={"Click the link below to sign up"}>
+                    <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
+                        Register
+                    </Button>
+                </Headline>
+            </Container>
+        </>
+    )
+}
 
             {/* Alternative Accordion info display */}
             {/* <Box>
@@ -109,17 +122,4 @@ export default function ClassesPage() {
                         </Card>
                     </Grid>
                 </Grid>
-            </Grid> */}
-
-            <Headline 
-            sx={{color: 'whitesmoke', padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}
-            title={"Registrations are open!"} 
-            subtitle={"Click the link below to sign up"}>
-                <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
-                    Register
-                </Button>
-            </Headline>
-            </Container>
-        </>
-    )
-}
+        </Grid> */}
