@@ -7,13 +7,13 @@ import { Metadata } from "next";
 import { MdExpandMore } from "react-icons/md";
 
 export const metadata : Metadata = {
-    title: 'Classes | Desert Beats',
+    title: 'Class Descriptions | Desert Beats',
 }
 
 export default function ClassesPage() {
     return (
         <>
-            <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner03.JPG"/>
+            <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner01.JPG"/>
 
             <Container>
                 <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly'}}>
