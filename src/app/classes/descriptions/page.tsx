@@ -18,13 +18,14 @@ export default function ClassesPage() {
             <Container>
                 <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', margin: '30px'}}>
                     {[
-                        { title: "Beginner", subtitle: "with Jodie", image: "/thumbnail_images/thumbnail-beginner.JPG" },
-                        { title: "Oriental", subtitle: "with Melanie", image: "/thumbnail_images/thumbnail-oriental.jpeg" },
-                        { title: "Fusion", subtitle: "with Quinn", image: "/thumbnail_images/thumbnail-fusion.jpeg" },
-                        { title: "FCBD Style", subtitle: "with Quinn and Melanie", image: "/thumbnail_images/thumbnail-fcbd.jpg" },
+                        { id: 'beginner', title: "Beginner", subtitle: "with Jodie", image: "/thumbnail_images/thumbnail-beginner.JPG" },
+                        { id: 'oriental', title: "Oriental", subtitle: "with Melanie", image: "/thumbnail_images/thumbnail-oriental.jpeg" },
+                        { id: 'fusion', title: "Fusion", subtitle: "with Quinn", image: "/thumbnail_images/thumbnail-fusion.jpeg" },
+                        { id: 'fcbd', title: "FCBD Style", subtitle: "with Quinn and Melanie", image: "/thumbnail_images/thumbnail-fcbd.jpg" },
                     ].map((item, index) => (
+                        <a key={index} href={`#${item.id}`} style={{textDecoration: 'none'}}>
                             <Box
-                            key={index}
+                            // key={index}
                             sx={{
                             position: "relative",
                             overflow: "hidden",
@@ -56,31 +57,41 @@ export default function ClassesPage() {
                                     <Typography variant="body1">{item.subtitle}</Typography>
                                 </Box>
                             </Box>
+                        </a>
                     ))}
                 </Box>
 
                 <Box>
                     {[
-                        { title: 'Beginner', subheader: 'with Jodie', text: ''},
-                        { title: 'Oriental', subheader: 'with Melanie', text: ''},
-                        { title: 'Fusion', subheader: 'with Quinn', text: ''},
-                        { title: 'FCBD Style', subheader: 'with Quinn and Melanie', text: ''},
+                        { id: 'beginner', title: 'Beginner', subheader: 'with Jodie', text: '', image: '/classes_images/descr-beginner.jpg'},
+                        { id: 'oriental', title: 'Oriental', subheader: 'with Melanie', text: '', image: '/classes_images/descr-oriental.jpg'},
+                        { id: 'fusion', title: 'Fusion', subheader: 'with Quinn', text: '', image: '/classes_images/descr-fusion.jpg'},
+                        { id: 'fcbd', title: 'FCBD Style', subheader: 'with Quinn and Melanie', text: '', image: '/classes_images/descr-fcbd02.jpg'},
                     ].map((item, index) => (
-                        <Card key={index}>
-                            <CardHeader
-                            title={item.title}
-                            subheader={item.subheader}
-                            />
-                            <CardContent>
-                                <Typography>{item.text}</Typography>
-                            </CardContent>
-                        </Card>
+                        <Box id={item.id} key={index}>
+                            <Card>
+                                <CardHeader
+                                title={item.title}
+                                subheader={item.subheader}
+                                />
+                                <CardContent>
+                                    <Typography>{item.text}</Typography>
+                                </CardContent>
+                                <CardMedia 
+                                component='img'
+                                image={item.image}
+                                alt={item.title}
+                                sx={{
+                                    maxWidth: 400
+                                }}
+                                />
+                            </Card>
+                        </Box>
                     ))}
                 </Box>
 
 {/* 'registrations open' headline */}
                 <Headline 
-                sx={{color: 'whitesmoke', padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}
                 title={"Registrations are open!"} 
                 subtitle={"Click the link below to sign up"}>
                     <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
