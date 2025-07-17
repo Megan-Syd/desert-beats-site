@@ -1,6 +1,6 @@
 import Card from "@/components/Card";
 import HeroImage from "@/components/HeroImage";
-import { Grid, Paper, Typography } from "@mui/material";
+import { CardHeader, Grid, Paper, Typography } from "@mui/material";
 import { Metadata } from "next";
 
 export const metadata : Metadata = {

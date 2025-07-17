@@ -17,8 +17,8 @@ export default function CardContainer({
 }: CardContainerProps) {
     return (
         <Card
-        sx={{ margin: '10px'}}>
-        <CardHeader title={title} subtitle={subtitle} />
+        sx={{ margin: '30px'}}>
+        <CardHeader title={title} subheader={subtitle} />
         <CardContent
         sx={{}} >
             {children}

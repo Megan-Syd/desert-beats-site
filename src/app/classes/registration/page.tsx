@@ -1,6 +1,7 @@
+import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
-import { Container, Card, CardContent } from "@mui/material";
+import { Container, CardContent } from "@mui/material";
 
 export default function RegistrationPage() {
     return(
