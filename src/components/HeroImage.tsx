@@ -7,16 +7,17 @@ export interface HeroImageProps{
   children?: ReactNode;
   buttonText?: string;
   buttonOnClick?: () => void;
+  backgroundPosition?: string;
 }
 
-export default function HeroImage({title, backgroundImageUrl, children, buttonText, buttonOnClick}: HeroImageProps) {
+export default function HeroImage({title, backgroundImageUrl, children, buttonText, buttonOnClick, backgroundPosition}: HeroImageProps) {
     return (
         <Box
         sx={{
             height: '50vh',
             backgroundImage: `url(${backgroundImageUrl || '###'})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: backgroundPosition || 'center',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
