@@ -16,26 +16,28 @@ export default function ClassesPage() {
             <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner01.JPG"/>
 
             <Container>
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly'}}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', margin: '30px'}}>
                     {[
-                        { title: "Beginner", subtitle: "with Jodie", image: "/placeholder-square.png" },
-                        { title: "Oriental", subtitle: "with Melanie", image: "/placeholder-square.png" },
-                        { title: "Fusion", subtitle: "with Quinn", image: "/placeholder-square.png" },
-                        { title: "FCBD Style", subtitle: "with Quinn and Melanie", image: "/placeholder-square.png" },
+                        { title: "Beginner", subtitle: "with Jodie", image: "/thumbnail_images/thumbnail-beginner.JPG" },
+                        { title: "Oriental", subtitle: "with Melanie", image: "/thumbnail_images/thumbnail-oriental.jpeg" },
+                        { title: "Fusion", subtitle: "with Quinn", image: "/thumbnail_images/thumbnail-fusion.jpeg" },
+                        { title: "FCBD Style", subtitle: "with Quinn and Melanie", image: "/thumbnail_images/thumbnail-fcbd.jpg" },
                     ].map((item, index) => (
-                        <Card key={index}>
                             <Box
+                            key={index}
                             sx={{
                             position: "relative",
                             overflow: "hidden",
+                            borderRadius: '5px',
+                            border: '1px solid black'
                             }}>
                                 <CardMedia
                                     component="img"
                                     image={item.image}
                                     alt={item.title}
                                     sx={{
-                                    width: "100%",
-                                    height: "100%",
+                                    width: "200px",
+                                    height: "200px",
                                     objectFit: "cover",
                                     display: 'block'
                                     }}
@@ -54,7 +56,6 @@ export default function ClassesPage() {
                                     <Typography variant="body1">{item.subtitle}</Typography>
                                 </Box>
                             </Box>
-                        </Card>
                     ))}
                 </Box>
 
