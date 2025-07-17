@@ -10,8 +10,9 @@ export default function Home() {
     <Container maxWidth='md'>
 
       <Headline
-            sx={{color: 'whitesmoke', padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}
-            title={"Welcome to Desert Beats"} subtitle={"mission statement Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla autem iusto et animi!"}></Headline>
+        title={"Welcome to Desert Beats"} 
+        subtitle={"mission statement Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla autem iusto et animi!"}>
+      </Headline>
 
       {/* <Card title={"Welcome to Desert Beats"}
       sx={{

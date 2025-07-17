@@ -10,7 +10,9 @@ export interface HeadlineProps{
 
 export default function Headline({title, subtitle, children, sx}: HeadlineProps) {
     return(
-        <Box sx={sx}>
+        <Box
+        sx={{color: 'whitesmoke', padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}
+        >
             <Typography variant="h4">{title}</Typography>
             <Typography variant="h6">{subtitle}</Typography>
             {children}
