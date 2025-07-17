@@ -29,7 +29,7 @@ export default function NavBar({
           };
     return(
     <Box>
-        <AppBar position="sticky" sx={{ backgroundColor: '#5e0435'}}>
+        <AppBar position="sticky" sx={{ backgroundColor: '#5e0435', width: '100%'}}>
             <Toolbar>
                 <Typography variant="h5">
                     <Link 
@@ -43,7 +43,7 @@ export default function NavBar({
                     page === 'Classes' ? (
                         <React.Fragment key={page}>
                           <Button
-                            sx={{ color: 'whitesmoke' }}
+                            sx={{ color: 'whitesmoke', padding: '6px 16px', midWidth: 'auto' }}
                             onClick={handleMenuClick}
                             aria-controls={open ? 'classes-menu' : undefined}
                             aria-haspopup="true"
@@ -52,10 +52,20 @@ export default function NavBar({
                             {page}
                           </Button>
                           <Menu
+                            disablePortal
+                            disableScrollLock
                             id="classes-menu"
                             anchorEl={anchorEl}
                             open={open}
                             onClose={handleMenuClose}
+                            PaperProps={{
+                              sx: {
+                                backgroundColor: '#7a1f55',
+                                color: 'whitesmoke',
+                                mt: 1,
+                                minWidth: 180,
+                              },
+                            }}
                             slotProps={{
                               list: {
                                 'aria-labelledby': 'classes-button'
