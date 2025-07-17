@@ -4,6 +4,7 @@ import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent, CardHeader, CardMedia, Container, Grid, Typography } from "@mui/material";
 import { Metadata } from "next";
+import Link from "next/link";
 import { MdExpandMore } from "react-icons/md";
 
 export const metadata : Metadata = {
@@ -69,11 +70,9 @@ export default function ClassesPage() {
                         { id: 'fcbd', title: 'FCBD Style', subheader: 'with Quinn and Melanie', text: '', image: '/classes_images/descr-fcbd02.jpg'},
                     ].map((item, index) => (
                         <Box id={item.id} key={index}>
-                            <Card>
-                                <CardHeader
-                                title={item.title}
-                                subheader={item.subheader}
-                                />
+                            <Card title={item.title}
+                                subtitle={item.subheader}>
+                                {/* <CardHeader/> */}
                                 <CardContent>
                                     <Typography>{item.text}</Typography>
                                 </CardContent>
@@ -94,9 +93,11 @@ export default function ClassesPage() {
                 <Headline 
                 title={"Registrations are open!"} 
                 subtitle={"Click the link below to sign up"}>
-                    <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
-                        Register
-                    </Button>
+                    <Link href='/classes/registration' passHref>
+                        <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
+                            Register
+                        </Button>
+                    </Link>
                 </Headline>
             </Container>
         </>
