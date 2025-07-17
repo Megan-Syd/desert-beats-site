@@ -1,6 +1,7 @@
+import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
-import { Card, CardContent, Container } from "@mui/material";
+import { CardContent, Container } from "@mui/material";
 import { Metadata } from "next";
 
 export const metadata : Metadata = {
@@ -14,9 +15,19 @@ export default function AboutPage() {
             <Container>
                 <Headline title={"Something something belly dance"} subtitle={"something else about dancey dance"} />
 
-                <Card>
+                <Card title="Our Story">
                     <CardContent></CardContent>
                 </Card>
+
+                <Card title="Our Purpose">
+                    <CardContent></CardContent>
+                </Card>
+
+                <Card title="Meet the Team">
+                    <CardContent></CardContent>
+                </Card>
+
+
             </Container>
         
         </>
