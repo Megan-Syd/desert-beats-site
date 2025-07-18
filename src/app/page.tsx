@@ -47,14 +47,11 @@ export default function Home() {
         </CardContent>
       </Card>
       <Headline 
-      sx={{color: 'whitesmoke', padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}
       title={"Registrations are open!"} 
       subtitle={"Click the link below to sign up"}>
-        <Link href='/classes/registration' passHref>
-          <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
-            Register
-          </Button>
-        </Link>
+        <Button href='/classes/registration' variant="outlined" color="inherit" sx={{ margin: '10px'}}>
+          Register
+        </Button>
       </Headline>
     </Container>
     </>
