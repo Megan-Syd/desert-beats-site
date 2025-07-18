@@ -1,4 +1,4 @@
-import AppAccordion from "@/UI/AppAccordion";
+import AppAccordion from "@/components/AppAccordion";
 import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";

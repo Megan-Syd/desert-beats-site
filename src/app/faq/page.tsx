@@ -1,4 +1,4 @@
-import AppAccordion from "@/UI/AppAccordion";
+import AppAccordion from "@/components/AppAccordion";
 import HeroImage from "@/components/HeroImage";
 import { Container } from "@mui/material";
 import { Metadata } from "next";
