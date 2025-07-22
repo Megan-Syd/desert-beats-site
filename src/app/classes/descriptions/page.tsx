@@ -6,6 +6,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent
 import { Metadata } from "next";
 import Link from "next/link";
 import { MdExpandMore } from "react-icons/md";
+import { classesData } from "@/data/classesData";
 
 export const metadata : Metadata = {
     title: 'Class Descriptions | Desert Beats',
@@ -17,12 +18,12 @@ export default function ClassesPage() {
             <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner01.JPG"/>
 
             <Container>
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', margin: '30px'}}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', margin: '30px'}}>
                     {[
                         { id: 'beginner', title: "Beginner", subtitle: "with Jodie", image: "/thumbnail_images/thumbnail-beginner.JPG" },
                         { id: 'oriental', title: "Oriental", subtitle: "with Melanie", image: "/thumbnail_images/thumbnail-oriental.jpeg" },
                         { id: 'fusion', title: "Fusion", subtitle: "with Quinn", image: "/thumbnail_images/thumbnail-fusion.jpeg" },
-                        { id: 'fcbd', title: "FCBD Style", subtitle: "with Quinn and Melanie", image: "/thumbnail_images/thumbnail-fcbd.jpg" },
+                        { id: 'fcbd', title: "FCBD® Style", subtitle: "with Quinn and Melanie", image: "/thumbnail_images/thumbnail-fcbd.jpg" },
                     ].map((item, index) => (
                         <a key={index} href={`#${item.id}`} style={{textDecoration: 'none'}}>
                             <Box
@@ -63,27 +64,51 @@ export default function ClassesPage() {
                 </Box>
 
                 <Box>
-                    {[
-                        { id: 'beginner', title: 'Beginner', subheader: 'with Jodie', text: '', image: '/classes_images/descr-beginner.jpg'},
-                        { id: 'oriental', title: 'Oriental', subheader: 'with Melanie', text: '', image: '/classes_images/descr-oriental.jpg'},
-                        { id: 'fusion', title: 'Fusion', subheader: 'with Quinn', text: '', image: '/classes_images/descr-fusion.jpg'},
-                        { id: 'fcbd', title: 'FCBD Style', subheader: 'with Quinn and Melanie', text: '', image: '/classes_images/descr-fcbd02.jpg'},
-                    ].map((item, index) => (
+                    {classesData.map((item, index) => (
                         <Box id={item.id} key={index}>
-                            <Card title={item.title}
-                                subtitle={item.subheader}>
-                                {/* <CardHeader/> */}
+                            <Card>
+                                <Typography variant="h3">{item.title}</Typography>
+                                <Typography variant="h6" sx={{color: '#5e0435'}}>
+                                    {item.subtitle.toUpperCase()}
+                                </Typography>
+                                <Grid container spacing={2}>
+                                    <Grid size={{ xs: 12, sm: 7}}>
                                 <CardContent>
-                                    <Typography>{item.text}</Typography>
+                                    <br/>
+                                    <Typography>{item.level}</Typography>
+                                    <br />
+
+                                    {item.description.split('\n\n').map((paragraph, idx) => (
+                                        <Typography key={idx}>
+                                        {paragraph}
+                                        </Typography>
+                                    ))}
+
+                                    {/* <Typography>{item.description}</Typography> */}
+                                    <br />
+                                    <Typography
+                                        sx={{
+                                            color: '#5e0435',
+                                            // textDecoration: 'underline',
+                                            // textDecorationColor: '#2b2d2f',
+                                            // textUnderlineOffset: '5px'
+                                        }}
+                                    >{item.timePlace}</Typography>
                                 </CardContent>
+                                </Grid>
+                                <Grid size={{ xs: 12, sm: 5}}>
                                 <CardMedia 
                                 component='img'
                                 image={item.image}
                                 alt={item.title}
                                 sx={{
-                                    maxWidth: 400
+                                    maxWidth: 400,
+                                    borderRadius: '5px',
+                                    border: '1px solid black'
                                 }}
                                 />
+                                </Grid>
+                                </Grid>
                             </Card>
                         </Box>
                     ))}
