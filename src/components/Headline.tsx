@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 export interface HeadlineProps{
     title: string;
-    subtitle: string;
+    subtitle?: string;
     children?: ReactNode;
     sx?: SxProps<Theme>;
 }
