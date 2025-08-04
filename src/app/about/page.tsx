@@ -1,8 +1,9 @@
 import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
-import { CardContent, Container } from "@mui/material";
+import { CardContent, Container, Typography } from "@mui/material";
 import { Metadata } from "next";
+import aboutData from "@/data/aboutData";
 
 export const metadata : Metadata = {
     title: 'About Us | Desert Beats',
@@ -13,21 +14,19 @@ export default function AboutPage() {
         <>
             <HeroImage title="About Us" backgroundImageUrl="/banner_images/banner03.JPG"/>
             <Container>
-                <Headline title={"Something something belly dance"} subtitle={"something else about dancey dance"} />
+                <Headline title={aboutData.title} subtitle={aboutData.subtitle} />
 
-                <Card title="Our Story">
-                    <CardContent></CardContent>
-                </Card>
-
-                <Card title="Our Purpose">
-                    <CardContent></CardContent>
-                </Card>
-
-                <Card title="Meet the Team">
-                    <CardContent></CardContent>
-                </Card>
-
-
+                {aboutData.sections.map((section, index) => (
+                    <Card key={index} title={section.header}>
+                        <CardContent>
+                            {section.paragraphs.map((paragraph, i) => (
+                                <Typography key={i} >
+                                    {paragraph}
+                                </Typography>
+                            ))}
+                        </CardContent>
+                    </Card>
+                ))}
             </Container>
         
         </>
