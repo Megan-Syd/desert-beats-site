@@ -15,7 +15,7 @@ export const metadata : Metadata = {
 export default function ClassesPage() {
     return (
         <>
-            <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner01.JPG"/>
+            <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner01.JPG" backgroundPosition="0 27%"/>
 
             <Container>
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', margin: '30px'}}>
