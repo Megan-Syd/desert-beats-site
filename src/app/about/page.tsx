@@ -17,8 +17,9 @@ export default function AboutPage() {
                 <Headline title={aboutData.title} subtitle={aboutData.subtitle} />
 
                 {aboutData.sections.map((section, index) => (
-                    <Card key={index} title={section.header}>
+                    <Card key={index} /*title={section.header}*/ >
                         <CardContent>
+                            <Typography variant="h3">{section.header}<br /><br /></Typography>
                             {section.paragraphs.map((paragraph, i) => (
                                 <Typography key={i} >
                                     {paragraph}
