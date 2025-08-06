@@ -12,7 +12,7 @@ export default function Home() {
 
       <Headline
         title={"Welcome to Desert Beats"} 
-        subtitle={"mission statement Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla autem iusto et animi!"}>
+        subtitle={"movement - music - connection - cameraderie"}>
       </Headline>
 
       {/* <Card title={"Welcome to Desert Beats"}

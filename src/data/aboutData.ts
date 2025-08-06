@@ -11,8 +11,8 @@ export interface AboutData{
 
 const aboutData : AboutData = {
 
-    title: "Welcome to Desert Beats Belly Dance in Saskatoon!",
-    subtitle: " Snappy tagline pending ",
+    title: "movement - music - connection - cameraderie",
+    subtitle: "These are the foundations that uphold Desert Beats. Read on to learn more about us.",
 
     sections: [
         {
