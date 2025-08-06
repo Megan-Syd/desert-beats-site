@@ -33,7 +33,6 @@ export default function FAQPage() {
                             key={index} 
                             summary={item.title} 
                             children={item.content}
-                            // sx={}
                             expanded={expandedPanel === index}
                             onChange={handleAccordionChange(index)}
                         />
