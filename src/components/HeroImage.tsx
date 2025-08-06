@@ -27,7 +27,7 @@ export default function HeroImage({title, backgroundImageUrl, children, buttonTe
           }}
           >
             <Box sx={{ zIndex: 2, maxWidth: 800, px: 3 }}>
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography variant="h2" component="h1" gutterBottom sx={{ textShadow: '1px 1px 0 #2b2d2f, -1px 1px 0 #2b2d2f, -1px -1px 0 #2b2d2f, 1px -1px 0 #2b2d2f' }}>
           {title}
         </Typography>
         <Typography variant="h5">
