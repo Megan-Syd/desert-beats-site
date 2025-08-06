@@ -18,6 +18,8 @@ export default function ClassesPage() {
             <HeroImage title="Classes" backgroundImageUrl="/banner_images/banner01.JPG" backgroundPosition="0 27%"/>
 
             <Container>
+                <Headline title="" subtitle={"Desert Beats Belly Dance holds classes in a variety of levels and belly dance styles. See below for detailed descriptions, times, specific dates, and studio.\nOur classes take place in the lovely studios of Saskatoon Salsa Dance Co. upstairs at 96 33rd Street East, Saskatoon.\nClasses run in two 10-week sessions, one in the fall and one in the winter/spring. "} />
+
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', margin: '30px'}}>
                     {[
                         { id: 'beginner', title: "Beginner", subtitle: "with Jodie", image: "/thumbnail_images/thumbnail-beginner.JPG" },
