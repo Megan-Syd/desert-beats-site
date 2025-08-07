@@ -1,12 +1,12 @@
-export interface AboutSection{
-    header: string;
-    paragraphs: string[];
-}
-
 export interface AboutData{
     title: string;
     subtitle: string;
     sections: AboutSection[];
+}
+
+export interface AboutSection{
+    header: string;
+    paragraphs: string[];
 }
 
 const aboutData : AboutData = {
