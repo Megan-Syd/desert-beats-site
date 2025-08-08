@@ -41,7 +41,8 @@ export default function Footer() {
                             links={[
                                 { label: "Home", href: "/" },
                                 { label: "About Us", href: "/about" },
-                                { label: "Classes", href: "/classes" },
+                                { label: "Classes", href: "/classes/descriptions" },
+                                { label: "Register", href: "/classes/registration"},
                                 { label: "Gallery", href: "/gallery" },
                                 { label: "FAQ", href: "/faq" },
                                 { label: "Contact", href: "/contact" },
