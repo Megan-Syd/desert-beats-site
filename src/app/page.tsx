@@ -4,6 +4,11 @@ import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import Link from "next/link";
 import newsData from "@/data/newsData";
+import { Metadata } from "next";
+
+export const metadata : Metadata = {
+  title: "Home | Desert Beats"
+}
 
 export default function Home() {
   return (

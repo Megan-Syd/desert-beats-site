@@ -2,6 +2,11 @@ import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
 import { Container, CardContent } from "@mui/material";
+import { Metadata } from "next";
+
+export const metadata : Metadata = {
+    title: 'Class Registration | Desert Beats',
+}
 
 export default function RegistrationPage() {
     return(
