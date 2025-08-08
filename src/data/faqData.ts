@@ -30,7 +30,7 @@ export const faqData : FaqData[] = [
 	},
 	{
 		title: "What is the refund policy for classes?",
-		content: "Partial refunds may be given, only within 3 days after the end of the first class.",
+		content: "Partial refunds may be requested up to 3 days after the first class.",
 	},
 	{
 		title: "Is there a drop-in fee option for classes?",
