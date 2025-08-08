@@ -22,7 +22,7 @@ export const faqData : FaqData[] = [
 	},
 	{
 		title: "How do I sign up for classes?",
-		content: "Visit our registration page and complete the google form.", /* include link */
+		content: "Visit our Registration page and complete the Google form.", /* include link */
 	},
 	{
 		title: "What is the cost for classes?",/* Maybe format into a little chart? Make a list…? */
