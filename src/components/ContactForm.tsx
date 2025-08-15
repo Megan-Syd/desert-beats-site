@@ -12,7 +12,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const topics = ['Registration', 'Beginner class', 'FCBD® or Fusion', 'Other'];
 // reg: Chris
@@ -24,6 +24,7 @@ interface FormValues {
   name: string;
   email: string;
   topic: string;
+  customTopic?: string;
   message: string;
 }
 
@@ -31,27 +32,49 @@ export default function ContactForm() {
   const {
     handleSubmit,
     control,
+    watch,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<FormValues>({
         defaultValues: {
           name: '',
           email: '',
           topic: '',
+          customTopic: '',
           message: '',
         },
       });
+
+  const topicValue = watch('topic');
+
+  useEffect(() => {
+    if (topicValue !== 'Other') {
+      setValue('customTopic', '');
+    }
+  }, [topicValue, setValue]);
 
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   const onSubmit = async (data: FormValues) => {
     setStatus('sending');
 
+    const topicToFormId: { [key: string]: string } = {
+      'Registration': 'nduesYcCz',
+      'Beginner class': 'yconSxOeZ',
+      'FCBD® or Fusion': 'RfF7zUOgs',
+      'Other': 'yErHtR7nZ',
+    };
+
+    const formId = topicToFormId[data.topic] ?? 'yErHtR7nZ';
+    const topicToSend = data.topic === 'Other' && data.customTopic ? data.customTopic : data.topic;
+
+
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(`https://submit.formspark.io/${formId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, topic: topicToSend }),
       });
 
       if (res.ok) {
@@ -135,6 +158,16 @@ export default function ContactForm() {
         )}
       />
 
+      {/* Custom topic input for "Other" */}
+      {topicValue === 'Other' && (
+          <Controller
+            name="customTopic"
+            control={control}
+            rules={{ required: 'Please specify a topic' }}
+            render={({ field }) => <TextField {...field} label="Custom Topic" error={!!errors.customTopic} helperText={errors.customTopic?.message} fullWidth />}
+          />
+        )}
+
       <Controller
         name="message"
         control={control}
@@ -151,6 +184,9 @@ export default function ContactForm() {
           />
         )}
       />
+
+      {/* Honeypot field for spam protection */}
+      <input type="text" name="_honeypot" style={{ display: 'none' }} />
 
       <Button sx={{backgroundColor: 'gray'}} variant="contained" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending...' : 'Send'}
