@@ -188,7 +188,7 @@ export default function ContactForm() {
       {/* Honeypot field for spam protection */}
       <input type="text" name="_honeypot" style={{ display: 'none' }} />
 
-      <Button sx={{backgroundColor: 'gray'}} variant="contained" disabled={status === 'sending'}>
+      <Button type='submit' sx={{backgroundColor: 'gray'}} variant="contained" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending...' : 'Send'}
       </Button>
 
