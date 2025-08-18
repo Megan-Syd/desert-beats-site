@@ -22,10 +22,10 @@ jobs:
           node-version: 18   # Next.js works well with Node 18+
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci   # faster and more reliable for CI
 
       - name: Build static site
-        run: npm run build   # runs "next build && next export" (make sure this is in your package.json)
+        run: npm run build   # make sure your package.json build script is now just "next build"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
