@@ -17,7 +17,7 @@ export default function RegistrationPage() {
             <Container>
                 <Headline title={"Registrations are open"} subtitle={"Complete the Google form below to register"}>
                     <Button 
-                    href='https://docs.google.com/forms/d/e/1FAIpQLSefWd8-VbE1s2I98fhG-0nglxdf2oXZzUu91oRANygRFhQMvw/viewform?usp=share_link&ouid=100439058037915451782'
+                    href='https://docs.google.com/forms/d/e/1FAIpQLScyhHEuL0e7HuBr1QApIdDAsMbItQbm7eu3pStj3SVCrpFweA/viewform?usp=share_link&ouid=100439058037915451782'
                     target="_blank"
                     rel="noopener noreferrer"
                      variant="outlined" 
