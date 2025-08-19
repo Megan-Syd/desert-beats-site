@@ -73,7 +73,9 @@ export default function ContactForm() {
     try {
       const res = await fetch(`https://submit-form.com/${formId}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json', 
+          'Accept': 'application/json', },
         body: JSON.stringify({ ...data, topic: topicToSend }),
       });
 
