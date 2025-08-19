@@ -15,7 +15,7 @@ export default function RegistrationPage() {
             <HeroImage title="Register" backgroundImageUrl="/banner_images/banner08.jpg" backgroundPosition="0 20%" />
 
             <Container>
-                <Headline title={"Registrations are open"} subtitle={"Complete the Google form below to register"}>
+                <Headline title={"Registrations are open!"} subtitle={"Complete the Google form below to register"}>
                     <Button 
                     href='https://docs.google.com/forms/d/e/1FAIpQLScyhHEuL0e7HuBr1QApIdDAsMbItQbm7eu3pStj3SVCrpFweA/viewform?usp=share_link&ouid=100439058037915451782'
                     target="_blank"
