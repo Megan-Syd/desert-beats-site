@@ -6,6 +6,7 @@ import HeroImage from "@/components/HeroImage";
 import { faqData } from "@/data/faqData";
 import { Box, Button, Container } from "@mui/material";
 import React from "react";
+import { FaqContentRenderer } from "./FaqContentRenderer";
 
 export default function FAQPageClient() {
     const [expandedPanel, setExpandedPanel] = React.useState<number | false>(false);
@@ -27,10 +28,11 @@ export default function FAQPageClient() {
                         <AppAccordion 
                             key={index} 
                             summary={item.title} 
-                            children={item.content}
                             expanded={expandedPanel === index}
                             onChange={handleAccordionChange(index)}
-                        />
+                        >
+                            <FaqContentRenderer content={item.content} />
+                        </AppAccordion>
                     ))}
                 </Box>
                 
