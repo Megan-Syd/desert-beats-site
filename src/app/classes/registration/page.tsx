@@ -58,7 +58,7 @@ export default function RegistrationPage() {
                         <Card>
                             <CardContent>
                                 <Typography variant="h5">Fees:</Typography>
-                                <List dense>
+                                <List>
                                     {[
                                         {id: "beginner", text: "Beginner belly dance with Jodie is $150"},
                                         {id: "belly", text: "Belly dance with Melanie (intermediate to advanced) is $185"},
