@@ -23,7 +23,7 @@ export default function FooterLinks({title, links}: FooterLinksProps) {
                 <Box>
                     <Typography variant="h5">
                         <Link 
-                        href='#' 
+                        href='' 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         sx={{ color: 'whitesmoke'}}>

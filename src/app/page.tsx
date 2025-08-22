@@ -17,7 +17,7 @@ export default function Home() {
     <Container maxWidth='md'>
 
       <Headline
-        title={"Welcome to Desert Beats"} 
+        title={"Welcome to Desert Beats Belly Dance"} 
         subtitle={"movement - music - connection - cameraderie"}>
       </Headline>
 
