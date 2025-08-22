@@ -1,7 +1,7 @@
 'use client';
-import { AppBar, Box, Button, Collapse, IconButton, Link, Menu, MenuItem, Toolbar, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { AppBar, Box, Button, Collapse, Dialog, IconButton, Link, Menu, MenuItem, Toolbar, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import { RxHamburgerMenu, RxCross1, RxChevronDown, RxChevronUp } from "react-icons/rx";
 
 export interface NavbarProps{
@@ -17,7 +17,7 @@ export default function NavBar({
         const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
         const open = Boolean(anchorEl);
 
-        const [menuOpen, setMenuOpen] = React.useState(false);
+        const [dialogOpen, setDialogOpen] = React.useState(false);
         const [classesOpen, setClassesOpen] = React.useState(false);
       
         const handleMenuClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -31,7 +31,7 @@ export default function NavBar({
         const handleNavigation = (page: string) => {
             const path = page.startsWith('/') ? page : `/${page.toLowerCase()}`;
             router.push(path);
-            setMenuOpen(false);
+            setDialogOpen(false);
            handleMenuClose(); 
           };
     return(
@@ -104,7 +104,7 @@ export default function NavBar({
                 <IconButton
                   color="inherit"
                   sx={{ marginLeft: "auto" }}
-                  onClick={() => setMenuOpen(true)}
+                  onClick={() => setDialogOpen(true)}
                 >
                   <RxHamburgerMenu />
                 </IconButton>
@@ -112,25 +112,28 @@ export default function NavBar({
             </Toolbar>
         </AppBar>
 
-        {isMobile && menuOpen && (
-        <Box
-          sx={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            bgcolor: "#5e0435",
-            color: "whitesmoke",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1300,
-          }}
+        {/* {isMobile && dialogOpen && ( */}
+        <Dialog
+          // fullScreen
+          open={dialogOpen}
+          onClose={() => setDialogOpen(false)}
+          // hideBackdrop={false}
+          // slotProps={{
+          //   paper: {
+          //     sx: {
+          //       bgcolor: "#5e0435",
+          //       color: "whitesmoke",
+          //       display: "flex",
+          //       flexDirection: "column",
+          //       alignItems: "center",
+          //       justifyContent: "center",
+          //       overflowY: "auto",
+          //     }
+          // }
+          // }}
         >
           <IconButton
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setDialogOpen(false)}
             sx={{ position: "absolute", top: 16, right: 16, color: "whitesmoke" }}
           >
             <RxCross1 />
@@ -149,7 +152,7 @@ export default function NavBar({
                 <Collapse in={classesOpen}>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1, mt: 1 }}>
                     <Button
-                      sx={{ fontSize: "1.5rem", color: "whitesmoke" }}
+                      sx={{ fontSize: "2rem", color: "whitesmoke" }}
                       onClick={() => handleNavigation("/classes/descriptions")}
                     >
                       Class Descriptions
@@ -173,8 +176,8 @@ export default function NavBar({
               </Button>
             )
           )}
-        </Box>
-      )}
+        </Dialog>
+      {/* )} */}
     </Box>
     )
 }
