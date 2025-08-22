@@ -22,10 +22,12 @@ export default function ContactPage() {
             </Button>
             </Headline>
             <Grid container spacing={2}>
-                <Grid size={{ sm: 12, md: 6}}>
-                    <Paper>
-                        <ContactForm />
-                    </Paper>
+                <Grid size={{ xs: 12, sm: 12, md: 6}}>
+                    {/* <Paper> */}
+                        {/* <CardContent> */}
+                            <ContactForm />
+                        {/* </CardContent> */}
+                    {/* </Paper> */}
                 </Grid>
 
                 <Grid size={{sm: 12, md: 6 }}>
@@ -43,21 +45,21 @@ export default function ContactPage() {
                         </Grid>
 
 
-                    <Grid size={{md: 12}}>
-                        <Paper sx={{ }}>
-                            <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.4578348319264!2d-106.66356392362759!3d52.144183071965074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f6e85e7e53f5%3A0xff23fa7b36940d06!2s96%20A%2033%20St%20E%2C%20Saskatoon%2C%20SK%20S7K%200S1!5e0!3m2!1sen!2sca!4v1752508594989!5m2!1sen!2sca"
-                                    width="100%"
-                                    height="300"
-                                    style={{ border: 0, borderRadius: '5px' }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                />
-                        </Paper>
+                        <Grid size={{md: 12}}>
+                            <Paper sx={{ }}>
+                                <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.4578348319264!2d-106.66356392362759!3d52.144183071965074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f6e85e7e53f5%3A0xff23fa7b36940d06!2s96%20A%2033%20St%20E%2C%20Saskatoon%2C%20SK%20S7K%200S1!5e0!3m2!1sen!2sca!4v1752508594989!5m2!1sen!2sca"
+                                        width="100%"
+                                        height="300"
+                                        style={{ border: 0, borderRadius: '5px' }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    />
+                            </Paper>
+                        </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
             </Grid>
         </Container>
         </>
