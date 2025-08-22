@@ -112,25 +112,24 @@ export default function NavBar({
             </Toolbar>
         </AppBar>
 
-        {/* {isMobile && dialogOpen && ( */}
         <Dialog
-          // fullScreen
+          fullScreen
           open={dialogOpen}
           onClose={() => setDialogOpen(false)}
-          // hideBackdrop={false}
-          // slotProps={{
-          //   paper: {
-          //     sx: {
-          //       bgcolor: "#5e0435",
-          //       color: "whitesmoke",
-          //       display: "flex",
-          //       flexDirection: "column",
-          //       alignItems: "center",
-          //       justifyContent: "center",
-          //       overflowY: "auto",
-          //     }
-          // }
-          // }}
+          hideBackdrop={false}
+          slotProps={{
+            paper: {
+              sx: {
+                bgcolor: "#5e0435",
+                color: "whitesmoke",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                overflowY: "auto",
+              }
+          }
+          }}
         >
           <IconButton
             onClick={() => setDialogOpen(false)}
@@ -177,7 +176,6 @@ export default function NavBar({
             )
           )}
         </Dialog>
-      {/* )} */}
     </Box>
     )
 }
