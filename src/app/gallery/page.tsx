@@ -11,7 +11,7 @@ export const metadata : Metadata = {
 export default function GalleryPage() {
     return (
         <>
-        <HeroImage title="Gallery" backgroundImageUrl="/banner_images/banner07.jpg" backgroundPosition="0 55%" />
+        <HeroImage title="Gallery" backgroundImageUrl="/banner_images/banner07.jpg" backgroundPosition="0 62%" />
 
         <Container>
             <Box sx={{ margin: '30px' }}>
