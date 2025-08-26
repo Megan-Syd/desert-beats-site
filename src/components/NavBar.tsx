@@ -151,7 +151,7 @@ export default function NavBar({
                 <Collapse in={classesOpen}>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1, mt: 1 }}>
                     <Button
-                      sx={{ fontSize: "2rem", color: "whitesmoke" }}
+                      sx={{ fontSize: "1.5rem", color: "whitesmoke" }}
                       onClick={() => handleNavigation("/classes/descriptions")}
                     >
                       Class Descriptions
