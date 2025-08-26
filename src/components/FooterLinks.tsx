@@ -21,7 +21,7 @@ export default function FooterLinks({title, links}: FooterLinksProps) {
             </Grid>
             <Grid size={{md: 3}}>
                 <Box>
-                    <Typography variant="h5">
+                    {/* <Typography variant="h5">
                         <Link 
                         href='' 
                         target="_blank" 
@@ -29,8 +29,8 @@ export default function FooterLinks({title, links}: FooterLinksProps) {
                         sx={{ color: 'whitesmoke'}}>
                             <FaYoutube />
                         </Link>
-                    </Typography>
-                    <Typography variant="h5">
+                    </Typography> */}
+                    <Typography variant="h4">
                         <Link 
                         href='https://www.facebook.com/DesertBeatsBellyDance' 
                         target="_blank" 
