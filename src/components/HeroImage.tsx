@@ -14,7 +14,7 @@ export default function HeroImage({title, backgroundImageUrl, children, buttonTe
     return (
         <Box
         sx={{
-            height: '50vh',
+            height: { xs: '30vh', sm: '35vh', md: '50vh'} ,
             backgroundImage: `url(${backgroundImageUrl || '###'})`,
             backgroundSize: 'cover',
             backgroundPosition: backgroundPosition || 'center',

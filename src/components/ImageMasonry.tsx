@@ -1,4 +1,6 @@
-import { Box, ImageList, ImageListItem } from "@mui/material";
+'use client';
+
+import { Box, ImageList, ImageListItem, useMediaQuery, useTheme } from "@mui/material";
 
 export interface ImageItem {
     image: string;
@@ -10,9 +12,11 @@ export interface ImageItem {
   }
 
 export default function ImageMasonry({ images }: ImageMasonryProps) {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     return(
         <Box>
-            <ImageList variant="masonry" cols={3} gap={20}>
+            <ImageList variant="masonry" cols={isMobile ? 2 : 3} gap={20}>
                 {images.map((item) => (
                     <ImageListItem key={item.image}>
                         <img
