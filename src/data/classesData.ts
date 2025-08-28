@@ -19,7 +19,7 @@ export const classesData : ClassesData[] = [
         image: "/classes_images/descr-beginner.jpg",
     },
     {
-        id: "oriental",
+        id: "bellydance",
         title: "Belly Dance",
         subtitle: "with Melanie",
         level: "This is an intermediate to advanced level class. Previous experience with belly dance is required.",
