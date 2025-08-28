@@ -20,29 +20,50 @@ export default function ClassesPage() {
             <Container>
                 <Headline title="" subtitle={"Desert Beats Belly Dance holds classes in a variety of levels and belly dance styles. See below for detailed descriptions, times, specific dates, and studio.\nOur classes take place in the lovely studios of Saskatoon Salsa Dance Co. upstairs at 96 33rd Street East, Saskatoon.\nClasses run in two 10-week sessions, one in the fall and one in the winter/spring. "} />
 
-                <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', margin: '30px'}}>
+                <Box 
+                sx={{ 
+                    display: 'flex', 
+                    flexDirection: 'row', 
+                    flexWrap: 'wrap', 
+                    justifyContent: 'space-evenly', 
+                    // justifyContent: 'flex-start',
+                    gap: 2,
+                    margin: '30px'
+                }}>
                     {[
                         { id: 'beginner', title: "Beginner", subtitle: "with Jodie", image: "/thumbnail_images/thumbnail-beginner.JPG" },
                         { id: 'bellydance', title: "Belly Dance", subtitle: "with Melanie", image: "/thumbnail_images/thumbnail-oriental.jpeg" },
                         { id: 'fusion', title: "Fusion", subtitle: "with Quinn", image: "/thumbnail_images/thumbnail-fusion.jpeg" },
                         { id: 'fcbd', title: "FCBD® Style", subtitle: "with Quinn and Melanie", image: "/thumbnail_images/thumbnail-fcbd.jpg" },
                     ].map((item, index) => (
-                        <a key={index} href={`#${item.id}`} style={{textDecoration: 'none'}}>
+                        <Box 
+                        component="a" 
+                        key={index} 
+                        href={`#${item.id}`} 
+                        sx={{
+                            textDecoration: 'none',
+                            // flex: { xs: "0 0 50%", md: "0 0 25%" },
+                            display: "flex",
+                            justifyContent: "center",
+                        }}>
                             <Box
                             // key={index}
                             sx={{
                             position: "relative",
                             overflow: "hidden",
                             borderRadius: '5px',
-                            border: '1px solid black'
+                            border: '1px solid black',
+                            marginBottom: 2,
+                            width: { xs: 160, sm: 200 },
                             }}>
                                 <CardMedia
                                     component="img"
                                     image={item.image}
                                     alt={item.title}
                                     sx={{
-                                    width: "200px",
-                                    height: "200px",
+                                    width: "100%",
+                                    height: "auto",
+                                    aspectRatio: "1 / 1",
                                     objectFit: "cover",
                                     display: 'block'
                                     }}
@@ -61,7 +82,7 @@ export default function ClassesPage() {
                                     <Typography variant="body1">{item.subtitle}</Typography>
                                 </Box>
                             </Box>
-                        </a>
+                        </Box>
                     ))}
                 </Box>
 
