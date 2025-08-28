@@ -100,7 +100,7 @@ export default function ContactForm() {
 
     {/* <CardHeader title="Get In Touch"/> */}
     <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        <Typography variant='h3'>Get In Touch</Typography>
+        <Typography variant='h3' sx={{ paddingY: 2}}>Get In Touch</Typography>
 
       <Controller
         name="name"
@@ -108,11 +108,11 @@ export default function ContactForm() {
         rules={{ required: 'Name is required' }}
         render={({ field }) => (
           <TextField
-            {...field}
-            label="Name"
-            error={!!errors.name}
-            helperText={errors.name?.message}
-            fullWidth
+          {...field}
+          label="Name"
+          error={!!errors.name}
+          helperText={errors.name?.message}
+          fullWidth
           />
         )}
       />
@@ -179,7 +179,7 @@ export default function ContactForm() {
             {...field}
             label="Message"
             multiline
-            rows={5}
+            rows={8}
             error={!!errors.message}
             helperText={errors.message?.message}
             fullWidth
@@ -190,7 +190,21 @@ export default function ContactForm() {
       {/* Honeypot field for spam protection */}
       <input type="text" name="_honeypot" style={{ display: 'none' }} />
 
-      <Button type='submit' sx={{backgroundColor: 'gray'}} variant="contained" disabled={status === 'sending'}>
+      <Button 
+        type='submit' 
+        variant="outlined" 
+        disabled={status === 'sending'}
+        sx={{
+          color: '#226C3B',
+          borderColor: '#226C3B',
+          "&:hover": {
+            backgroundColor: '#226C3B',
+            color: 'whitesmoke',
+            borderColor: '#226C3B',
+          
+          }
+        }} 
+      >
         {status === 'sending' ? 'Sending...' : 'Send'}
       </Button>
 

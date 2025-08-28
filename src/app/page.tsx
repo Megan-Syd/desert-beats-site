@@ -30,7 +30,7 @@ export default function Home() {
         justifyContent: 'center',
         gap: 4,
       }}>
-        <Typography variant="h4">{newsData.title}</Typography>
+        <Typography variant="h3" sx={{ color: "#5e0435"}}>{newsData.title}</Typography>
       {newsData.sections.map((section, index) => (
         <CardContent key={index}>
           {section.header && (

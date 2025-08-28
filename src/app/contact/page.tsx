@@ -13,7 +13,7 @@ export default function ContactPage() {
     return (
         <>
         <HeroImage title="Contact Us" backgroundImageUrl="/banner_images/banner05.jpeg" backgroundPosition="0 37%" />
-        <Container maxWidth="lg" sx={{paddingBottom: 4}}>
+        <Container maxWidth="md" sx={{paddingBottom: 4}}>
             <Headline 
                 title={"Questions? Write to us!"} 
                 subtitle={"Send us a message by submitting the form below. We'll be happy to respond as soon as we can.\nBut first, check the FAQ page for any info you may have missed!"}>
@@ -22,7 +22,7 @@ export default function ContactPage() {
             </Button>
             </Headline>
             <Grid container spacing={2}>
-                <Grid size={{ xs: 12, sm: 12, md: 6}}>
+                <Grid size={{ xs: 12, md: 6}}>
                     {/* <Paper> */}
                         {/* <CardContent> */}
                             <ContactForm />

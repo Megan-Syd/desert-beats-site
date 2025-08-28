@@ -13,13 +13,13 @@ export default function AboutPage() {
     return (
         <>
             <HeroImage title="About Us" backgroundImageUrl="/banner_images/banner03.JPG"/>
-            <Container>
+            <Container maxWidth="md">
                 <Headline title={aboutData.title} />
 
                 {aboutData.sections.map((section, index) => (
                     <Card key={index} /*title={section.header}*/ >
                         <CardContent>
-                            <Typography variant="h3">{section.header}<br /><br /></Typography>
+                            <Typography variant="h3" sx={{ marginBottom: 5, color: "#5e0435"}}>{section.header}</Typography>
                             {section.paragraphs.map((paragraph, i) => (
                                 <Typography key={i} >
                                     {paragraph}
@@ -41,15 +41,18 @@ export default function AboutPage() {
                             position: "relative",
                             overflow: "hidden",
                             borderRadius: '5px',
-                            border: '1px solid black'
+                            border: '1px solid black',
+                            marginBottom: 2,
+                            width: { xs: 300, sm: 175, md: 250}
                             }}>
                                 <CardMedia
                                     component="img"
                                     image={item.image}
                                     alt={item.title}
                                     sx={{
-                                    width: "300px",
-                                    height: "300px",
+                                    width: "100%",
+                                    height: "auto",
+                                    aspectRatio: "1 / 1",
                                     objectFit: "cover",
                                     display: 'block',
                                     transform: 'scale(1.7)',

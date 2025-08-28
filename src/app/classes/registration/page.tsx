@@ -1,7 +1,7 @@
 import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
-import { Container, CardContent, List, ListItem, ListItemText, ListItemIcon, Typography, Grid, Link, Button } from "@mui/material";
+import { Container, CardContent, List, ListItem, ListItemText, ListItemIcon, Typography, Grid, Link, Button, Paper } from "@mui/material";
 import { Metadata } from "next";
 import { FaCircle } from "react-icons/fa";
 
@@ -14,24 +14,16 @@ export default function RegistrationPage() {
         <>
             <HeroImage title="Register" backgroundImageUrl="/banner_images/banner08.jpg" backgroundPosition="0 20%" />
 
-            <Container>
-                <Headline title={"Registrations are open!"} subtitle={"Complete the Google form below to register"}>
-                    <Button 
-                    href='https://docs.google.com/forms/d/e/1FAIpQLScyhHEuL0e7HuBr1QApIdDAsMbItQbm7eu3pStj3SVCrpFweA/viewform?usp=share_link&ouid=100439058037915451782'
-                    target="_blank"
-                    rel="noopener noreferrer"
-                     variant="outlined" 
-                     color="inherit" 
-                     sx={{ margin: '10px'}}>
-                        Registration Form
-                    </Button>
+            <Container maxWidth="md">
+                <Headline title={"Registrations are open!"} subtitle={"Read the important info below, then complete the Registration Forn"}>
+                    
                 </Headline>
 
                 <Grid container spacing={2}>
                     <Grid size={{ xs: 12, md: 6}}>
-                        <Card>
+                        <Paper sx={{ padding: 2}}>
                             <CardContent>
-                                <Typography>
+                                <Typography  sx={{ paddingY: 1.25}}>
                                 Registration and fees are due before the start of the first class. Fees can be paid by <strong>e-transfer</strong> to melaniesydiaha@gmail.com, by <strong>cash</strong>, or by <strong>cheque</strong> payable to Melanie Sydiaha.
                                 </Typography>
                                 <br />
@@ -39,7 +31,7 @@ export default function RegistrationPage() {
                                 Classes run for 10-week sessions, and specific dates will be posted on the website during each session. Beginner classes are each 1 hour long. Belly dance and fusion classes are 1 hour 15 minutes. FCBD® classes are 45 minutes. See{' '} 
                                     <Link 
                                     href="/classes/descriptions" 
-                                    sx={{ color: "#5e0435", textDecorationColor: "#5e0435"}}>
+                                    sx={{ color: "#226C3B", textDecoration: "none"}}>
                                         Class Descriptions
                                     </Link> 
                                 {' '}for more details about each class.
@@ -51,13 +43,13 @@ export default function RegistrationPage() {
                                 ! We would love to hear from you.
                                 </Typography>
                             </CardContent>
-                        </Card>
+                        </Paper>
                     </Grid>
 
                     <Grid size={{ xs: 12, md: 6}}>
-                        <Card>
+                        <Paper sx={{ padding: 2}}>
                             <CardContent>
-                                <Typography variant="h5">Fees:</Typography>
+                                <Typography variant="h4">Fees:</Typography>
                                 <List>
                                     {[
                                         {id: "beginner", text: "Beginner belly dance with Jodie is $150"},
@@ -76,9 +68,21 @@ export default function RegistrationPage() {
                                     ))}
                                 </List>
                             </CardContent>
-                        </Card>
+                        </Paper>
                     </Grid>
                 </Grid>
+
+                <Headline title={""}>
+                <Button 
+                    href='https://docs.google.com/forms/d/e/1FAIpQLScyhHEuL0e7HuBr1QApIdDAsMbItQbm7eu3pStj3SVCrpFweA/viewform?usp=share_link&ouid=100439058037915451782'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                     variant="outlined" 
+                     color="inherit" 
+                     sx={{ margin: '10px', width: '400px'}}>
+                        Registration Form
+                    </Button>
+                </Headline>
             </Container>
 
 
