@@ -20,9 +20,14 @@ export const faqData : FaqData[] = [
 				type: "paragraph",
 				children: [
 					{type: "text", value: "We have two sessions per year: one in the fall from September to early December, and another in winter/spring from mid-January to early April. Each session consists of 10 classes. The specific dates of classes will be posted on the website."},
-					{ type: "text", value: "Belly dance classes are held on Mondays and fusion and Fat Chance Belly Dance®Style are on Thursdays. See the classes page for more details."}
 				],
 			},
+			{
+				type: "paragraph",
+				children: [
+					{ type: "text", value: "Belly dance classes are held on Mondays and fusion and Fat Chance Belly Dance®Style are on Thursdays. See the classes page for more details."}
+				],
+			}
 		],		
 	},
 	{
@@ -31,7 +36,7 @@ export const faqData : FaqData[] = [
 			{
 				type: "paragraph",
 				children: [
-					{type: "text", value: "We have all of our classes at the lovely Saskatoon Salsa Dance Co. studios at 96 33rd Street East. Both studios are upstairs. After you register, we will provide you with the door access code.The big studio (Monday classes) is to the right at the top of the stairs and to get to the green studio (Thursday classes), turn left at the top of the stairs and head to the end of the hallway."}
+					{type: "text", value: "We have all of our classes at the lovely Saskatoon Salsa Dance Co. studios at 96 33rd Street East. Both studios are upstairs. After you register, we will provide you with the door access code. The big studio (Monday classes) is to the right at the top of the stairs and to get to the green studio (Thursday classes), turn left at the top of the stairs and head to the end of the hallway."}
 				],
 			},
 		],
@@ -54,10 +59,14 @@ export const faqData : FaqData[] = [
 				type: "paragraph",
 				children: [
 					{type: "text", value: "Wear stretchy, breathable, and comfortable clothing. It is helpful for your instructor if your clothing isn’t too loose. If you have a coin scarf or fringe scarf to wear on your hips, please do; otherwise your instructor can loan you one."},
+				],
+			},
+			{
+				type: "paragraph",
+				children: [
 					{type: "text", value: "Belly dancers often dance with bare feet, although many of us wear dance shoes to class. Common and appropriate options include leather or canvas ballet slippers, 'foot undies', or jazz shoes."},
 				],
 			},
-			
 		],
 	},
 	{
@@ -138,6 +147,11 @@ export const faqData : FaqData[] = [
 				type: "paragraph",
 				children: [
 					{ type: "text", value: "A good way to start is by exploring these dance troupes and performers:"},
+				],
+			},
+			{
+				type: "paragraph",
+				children: [
 					{ type: "text", value: "Local:"},
 					{ type: "list", items: [
 						"Durga Dance with Victoria - Fire Dancing, Poi, Flow Arts",
@@ -146,6 +160,11 @@ export const faqData : FaqData[] = [
 						"Bedouin Beats, Edmonton, AB",
 						"Azura Bellydance, Regina, SK",
 					]},
+				],
+			},
+			{
+				type: "paragraph",
+				children: [
 					{ type: "text", value: "National and International:"},
 					{ type: "list", items: [
 						"Ashley Rhianne, Vancouver, British Columbia",
@@ -154,9 +173,8 @@ export const faqData : FaqData[] = [
 						"Blue Lotus Tribe, Chicago",
 						"Spiral Skies Belly dance, Billings, Montana"
 					]},
-
 				],
 			},
-		]
+		],
 	},
 ];
