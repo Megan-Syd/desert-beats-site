@@ -23,7 +23,7 @@ export default function ClassesPage() {
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', margin: '30px'}}>
                     {[
                         { id: 'beginner', title: "Beginner", subtitle: "with Jodie", image: "/thumbnail_images/thumbnail-beginner.JPG" },
-                        { id: 'oriental', title: "Oriental", subtitle: "with Melanie", image: "/thumbnail_images/thumbnail-oriental.jpeg" },
+                        { id: 'bellydance', title: "Belly Dance", subtitle: "with Melanie", image: "/thumbnail_images/thumbnail-oriental.jpeg" },
                         { id: 'fusion', title: "Fusion", subtitle: "with Quinn", image: "/thumbnail_images/thumbnail-fusion.jpeg" },
                         { id: 'fcbd', title: "FCBD® Style", subtitle: "with Quinn and Melanie", image: "/thumbnail_images/thumbnail-fcbd.jpg" },
                     ].map((item, index) => (
