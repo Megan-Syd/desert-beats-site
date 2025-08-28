@@ -30,9 +30,9 @@ const newsData : NewsData = {
             ],
         },
         {
-            header: "Registration time is approaching...",
+            header: "Registration time is here!",
             paragraphs: [
-                "Classes will begin again mid-September and registration will be open in mid-August. Stay tuned and follow our Facebook page for more information!"
+                "Classes begin again mid-September and registration is now open."
             ],
         },
         {
