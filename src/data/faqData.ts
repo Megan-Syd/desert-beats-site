@@ -19,15 +19,21 @@ export const faqData : FaqData[] = [
 			{
 				type: "paragraph",
 				children: [
-					{type: "text", value: "We have two sessions per year: one in the fall from September to early December, and another in winter/spring from mid-January to early April. Each session consists of 10 classes. The specific dates of classes will be posted on the website."},
+					{type: "text", value: "We have two sessions per year: one in the fall from September to early December, and another in winter/spring from mid-January to early April. Each session consists of 10 classes. The specific dates of classes for the Fall 2025 session are as follows:"},
 				],
 			},
 			{
 				type: "paragraph",
 				children: [
-					{ type: "text", value: "Belly dance classes are held on Mondays and fusion and Fat Chance Belly Dance®Style are on Thursdays. See the classes page for more details."}
+					{type: "text", value: "Monday classes: September 15, 22, 29, October 6, 20, 27, November 3, 24, December 1, 8."}
+				]
+			},
+			{
+				type: "paragraph",
+				children: [
+					{ type: "text", value: "Thursday classes: September 18, 25, October 2, 16, 30, November 6, 13, 20, 27, December 4."}
 				],
-			}
+			},
 		],		
 	},
 	{

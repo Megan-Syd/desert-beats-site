@@ -24,9 +24,9 @@ const newsData : NewsData = {
     title: "What's new at Desert Beats",
     sections: [
         {
-            header: "In the community...",
+            header: "Class times update",
             paragraphs: [
-                "Desert Beats Belly Dancers had a great time performing at Battlefords Area Pride Week on Saturday, July 26 at Kinsmen Park in North Battleford. Thanks for having us!"
+                "Thursday classes will begin with Fat Chance Belly Dance® at 7:00, followed by Fusion at 7:45."
             ],
         },
         {
@@ -36,7 +36,14 @@ const newsData : NewsData = {
             ],
         },
         {
-            header: "On the road again…",
+            header: "In the community",
+            paragraphs: [
+                "Desert Beats Belly Dancers had a great time performing at Battlefords Area Pride Week on Saturday, July 26 at Kinsmen Park in North Battleford. Thanks for having us!"
+            ],
+        },
+
+        {
+            header: "On the road again",
             paragraphs: [
                 "Dancers Melanie, Quinn, and Chris will be jetting off to Kelowna in early September to participate in a fabulous four-day belly dancing and drumming intensive hosted by Bellydance with Victoria! They are thrilled and delighted for the opportunity to learn from the internationally renowned Aziza of Montreal/Portland and master drummer Issam Houshan. The three of them are excited to bring back fresh ideas and skills and energy to the fall session. \n\nIf you’re in the Kelowna area on September 6, come out and watch them perform in the amazing show, Night at the Oasis, featuring Aziza and Issam along with dancers from across western Canada! (We promise there will be pictures!)"
             ],
