@@ -1,5 +1,6 @@
 import { Box, Divider, Grid, Icon, Link, Stack, Typography } from "@mui/material";
 import FooterLinks from "./FooterLinks";
+import Image from "next/image";
 
 export default function Footer() {
     return(
@@ -12,24 +13,14 @@ export default function Footer() {
                 <Grid size={{ xs: 12, md: 4}}>
                     <Box sx={{ display: 'flex', justifyContent: 'center'}}>
                         <Box sx={{ textAlign: 'left', maxWidth: '250px', width: '100%' }}>
-                            {/* <Typography variant="h6">Desert Beats Belly Dance</Typography>
-                            <Typography>96 A 33rd Street East</Typography>
-                            <Typography>Saskatoon SK</Typography>
-                            <Typography>S7K 0S1</Typography> */}
+                            <Image src={"/Untitled design.svg"} alt={"Desert Beats Belly Dance logo"} height={200} width={200} />
                         </Box>
                     </Box>
                 </Grid>
                 <Grid size={{ xs: 12, md: 4}}>
                     <Box sx={{ display: 'flex', justifyContent: 'center'}}>
                         <Box sx={{ textAlign: 'left', maxWidth: '250px', width: '100%' }}>
-                            {/* <Typography variant="h6">Hours Of Operation</Typography>
-                            <Typography>Monday</Typography>
-                            <Typography>Tuesday</Typography>
-                            <Typography>Wednesday</Typography>
-                            <Typography>Thursday</Typography>
-                            <Typography>Friday</Typography>
-                            <Typography>Saturday</Typography>
-                            <Typography>Sunday</Typography> */}
+                            
                         </Box>
                     </Box>
                 </Grid>

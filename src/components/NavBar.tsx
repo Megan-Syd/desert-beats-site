@@ -1,5 +1,6 @@
 'use client';
 import { AppBar, Box, Button, Collapse, Dialog, IconButton, Link, Menu, MenuItem, Toolbar, Typography, useMediaQuery, useTheme } from "@mui/material";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { RxHamburgerMenu, RxCross1, RxChevronDown, RxChevronUp } from "react-icons/rx";
@@ -38,13 +39,14 @@ export default function NavBar({
     <Box>
         <AppBar position="sticky" sx={{ backgroundColor: '#5e0435', width: '100%'}}>
             <Toolbar>
-                <Typography variant="h5">
-                    <Link 
+                {/*<Typography variant="h5">
+                     <Link 
                     href="/" 
                     style={{ textDecoration: 'none', color: 'inherit' }}>
                         Desert Beats Belly Dance
                     </Link>
-                </Typography>
+                  </Typography> */}
+                  <Image src={"/Untitled design (1).svg"} alt={""} width={400} height={150} />
 
                 {!isMobile && (
                 <Box sx={{ display: 'flex', gap: 2, marginLeft: 'auto' }}>
