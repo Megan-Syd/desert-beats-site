@@ -13,7 +13,7 @@ export default function NavBar({
     pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQ']}: NavbarProps) {
         const router = useRouter();
         const theme = useTheme();
-        const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+        const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
         const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
         const open = Boolean(anchorEl);
@@ -38,7 +38,7 @@ export default function NavBar({
     return(
     <Box>
         <AppBar position="sticky" sx={{ backgroundColor: '#5e0435', width: '100%'}}>
-            <Toolbar>
+            <Toolbar sx={{ height: 64, display: 'flex',justifyContent: 'space-between'}}>
                 {/*<Typography variant="h5">
                      <Link 
                     href="/" 
@@ -46,7 +46,14 @@ export default function NavBar({
                         Desert Beats Belly Dance
                     </Link>
                   </Typography> */}
-                  <Image src={"/dbbd-name.svg"} alt={""} width={400} height={150} />
+                  <Box sx={{ width: 300, height: '100%', overflow: 'hidden', position: 'relative'}}>
+                    <Image 
+                      src={"/dbbd-name.svg"} 
+                      alt={"Desert Beats Belly Dance title"} 
+                      style={{ objectFit: 'cover'}}
+                      fill
+                    />
+                     </Box>
 
                 {!isMobile && (
                 <Box sx={{ display: 'flex', gap: 2, marginLeft: 'auto' }}>
