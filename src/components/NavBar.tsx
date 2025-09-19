@@ -1,5 +1,6 @@
 'use client';
 import { AppBar, Box, Button, Collapse, Dialog, IconButton, Link, Menu, MenuItem, Toolbar, Typography, useMediaQuery, useTheme } from "@mui/material";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { RxHamburgerMenu, RxCross1, RxChevronDown, RxChevronUp } from "react-icons/rx";
@@ -12,7 +13,7 @@ export default function NavBar({
     pages =['About', 'Classes', 'Gallery', 'Contact', 'FAQ']}: NavbarProps) {
         const router = useRouter();
         const theme = useTheme();
-        const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+        const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
         const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
         const open = Boolean(anchorEl);
@@ -37,14 +38,22 @@ export default function NavBar({
     return(
     <Box>
         <AppBar position="sticky" sx={{ backgroundColor: '#5e0435', width: '100%'}}>
-            <Toolbar>
-                <Typography variant="h5">
-                    <Link 
+            <Toolbar sx={{ height: 64, display: 'flex',justifyContent: 'space-between'}}>
+                {/*<Typography variant="h5">
+                     <Link 
                     href="/" 
                     style={{ textDecoration: 'none', color: 'inherit' }}>
                         Desert Beats Belly Dance
                     </Link>
-                </Typography>
+                  </Typography> */}
+                  <Box sx={{ width: 300, height: '100%', overflow: 'hidden', position: 'relative'}}>
+                    <Image 
+                      src={"/dbbd-name.svg"} 
+                      alt={"Desert Beats Belly Dance title"} 
+                      style={{ objectFit: 'cover'}}
+                      fill
+                    />
+                     </Box>
 
                 {!isMobile && (
                 <Box sx={{ display: 'flex', gap: 2, marginLeft: 'auto' }}>
