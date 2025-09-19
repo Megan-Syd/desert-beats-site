@@ -13,7 +13,7 @@ export default function Footer() {
                 <Grid size={{ xs: 12, md: 4}}>
                     <Box sx={{ display: 'flex', justifyContent: 'center'}}>
                         <Box sx={{ textAlign: 'left', maxWidth: '250px', width: '100%' }}>
-                            <Image src={"/Untitled design.svg"} alt={"Desert Beats Belly Dance logo"} height={200} width={200} />
+                            <Image src={"/dbbd-letters.svg"} alt={"Desert Beats Belly Dance logo"} height={200} width={200} />
                         </Box>
                     </Box>
                 </Grid>

@@ -46,7 +46,7 @@ export default function NavBar({
                         Desert Beats Belly Dance
                     </Link>
                   </Typography> */}
-                  <Image src={"/Untitled design (1).svg"} alt={""} width={400} height={150} />
+                  <Image src={"/dbbd-name.svg"} alt={""} width={400} height={150} />
 
                 {!isMobile && (
                 <Box sx={{ display: 'flex', gap: 2, marginLeft: 'auto' }}>
