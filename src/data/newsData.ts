@@ -24,6 +24,12 @@ const newsData : NewsData = {
     title: "What's new at Desert Beats",
     sections: [
         {
+            header: "Monday's Beginner class postponed!",
+            paragraphs: [
+                "Please note that this Monday, October 20th, the Beginner class with Jodie will be postponed due to an illness. Belly Dance with Melanie will continue as usual!"
+            ],
+        },
+        {
             header: "Class times update",
             paragraphs: [
                 "Thursday classes will begin with Fat Chance Belly Dance® at 7:00, followed by Fusion at 7:45."
