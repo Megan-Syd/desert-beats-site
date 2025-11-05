@@ -2,7 +2,7 @@ import AppAccordion from "@/components/AppAccordion";
 import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent, CardHeader, CardMedia, Container, Grid, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent, CardHeader, CardMedia, Container, Grid, Paper, Typography } from "@mui/material";
 import { Metadata } from "next";
 import Link from "next/link";
 import { MdExpandMore } from "react-icons/md";
@@ -139,14 +139,47 @@ export default function ClassesPage() {
 
 {/* 'registrations open' headline */}
                 <Headline 
-                title={"Registrations are open!"} 
-                subtitle={"Click the link below to sign up"}>
-                    <Link href='/classes/registration' passHref>
+                title={"Registrations for January coming soon"} 
+                subtitle={"Stay tuned for more info!"}>
+                    {/* <Link href='/classes/registration' passHref>
                         <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
                             Register
                         </Button>
-                    </Link>
+                    </Link> */}
                 </Headline>
+
+{/*Google Calendar embedded*/}
+                <Box
+                    id="calendar"
+                    sx={{ 
+                        display: "flex", 
+                        justifyContent: "center",
+                        // alignItems: "center",
+                        width: "100%",
+                        py: 4,
+                    }}
+                >
+                    <Paper
+                        elevation={3}
+                        sx={{ 
+                            p: { xs: 0.5, sm: 2 },
+                            width: "100%",
+                            maxWidth: "900px", // controls max size on big screens
+                            overflow: "hidden",
+                            borderRadius: 2
+                        }}
+                    >
+                    <iframe 
+                        src="https://calendar.google.com/calendar/embed?src=sydiaha.megan%40gmail.com&ctz=America%2FToronto" 
+                        style={{
+                            border: 0,
+                            width: "100%",
+                            height: "600px"
+                        }}
+                        loading="lazy"
+                    />
+                    </Paper>
+                </Box>
             </Container>
         </>
     )
