@@ -23,10 +23,16 @@ export interface NewsSection{
 const newsData : NewsData = {
     title: "What's new at Desert Beats",
     sections: [
+        // {
+        //     header: "Monday's Beginner class postponed!",
+        //     paragraphs: [
+        //         "Please note that this Monday, October 20th, the Beginner class with Jodie will be postponed due to an illness. Belly Dance with Melanie will continue as usual!"
+        //     ],
+        // },
         {
-            header: "Monday's Beginner class postponed!",
+            header: "No classes November 10 and 17",
             paragraphs: [
-                "Please note that this Monday, October 20th, the Beginner class with Jodie will be postponed due to an illness. Belly Dance with Melanie will continue as usual!"
+                "Don't forget! There are no classes scheduled for Mondays November 10 or 17. See the full list of class dates in the FAQ page.",
             ],
         },
         {
@@ -35,12 +41,12 @@ const newsData : NewsData = {
                 "Thursday classes will begin with Fat Chance Belly Dance® at 7:00, followed by Fusion at 7:45."
             ],
         },
-        {
-            header: "Registration time is here!",
-            paragraphs: [
-                "Classes begin again mid-September and registration is now open."
-            ],
-        },
+        // {
+        //     header: "Registration time is here!",
+        //     paragraphs: [
+        //         "Classes begin again mid-September and registration is now open."
+        //     ],
+        // },
         {
             header: "In the community",
             paragraphs: [
