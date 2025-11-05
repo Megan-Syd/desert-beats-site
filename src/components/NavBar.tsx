@@ -46,14 +46,23 @@ export default function NavBar({
                         Desert Beats Belly Dance
                     </Link>
                   </Typography> */}
-                  <Box sx={{ width: 300, height: '100%', overflow: 'hidden', position: 'relative'}}>
+                  <Box 
+                    component="a"
+                    href="/"
+                    sx={{ 
+                      width: 300, 
+                      height: '100%', 
+                      overflow: 'hidden', 
+                      position: 'relative'
+                    }}
+                  >
                     <Image 
                       src={"/dbbd-name.svg"} 
                       alt={"Desert Beats Belly Dance title"} 
                       style={{ objectFit: 'cover'}}
                       fill
                     />
-                     </Box>
+                  </Box>
 
                 {!isMobile && (
                 <Box sx={{ display: 'flex', gap: 2, marginLeft: 'auto' }}>
