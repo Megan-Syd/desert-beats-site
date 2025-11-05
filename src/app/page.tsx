@@ -60,10 +60,10 @@ export default function Home() {
       </Card>
 
       <Headline 
-      title={"Registrations are open!"} 
-      subtitle={"Click the link below for more information"}>
-        <Button href='/classes/registration' variant="outlined" color="inherit" sx={{ margin: '10px'}}>
-          Register
+      title={"Registrations for January coming soon!"} 
+      subtitle={"Click the link below to learn about our classes"}>
+        <Button href='/classes/descriptions' variant="outlined" color="inherit" sx={{ margin: '10px'}}>
+          Classes
         </Button>
       </Headline>
     </Container>
