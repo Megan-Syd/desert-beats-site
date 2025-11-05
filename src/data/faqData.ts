@@ -19,21 +19,22 @@ export const faqData : FaqData[] = [
 			{
 				type: "paragraph",
 				children: [
-					{type: "text", value: "We have two sessions per year: one in the fall from September to early December, and another in winter/spring from mid-January to early April. Each session consists of 10 classes. The specific dates of classes for the Fall 2025 session are as follows:"},
+					{type: "text", value: "We have two sessions per year: one in the fall from September to early December, and another in winter/spring from mid-January to early April. Each session consists of 10 classes. The specific dates of classes for the Fall 2025 session can be found on the "},
+					{type: "link", value: "calendar.", href: "/classes/descriptions#calendar"}
 				],
 			},
-			{
-				type: "paragraph",
-				children: [
-					{type: "text", value: "Monday classes: September 15, 22, 29, October 6, 20, 27, November 3, 24, December 1, 8."}
-				]
-			},
-			{
-				type: "paragraph",
-				children: [
-					{ type: "text", value: "Thursday classes: September 18, 25, October 2, 16, 30, November 6, 13, 20, 27, December 4."}
-				],
-			},
+			// {
+			// 	type: "paragraph",
+			// 	children: [
+			// 		{type: "text", value: "Monday classes: September 15, 22, 29, October 6, 20, 27, November 3, 24, December 1, 8."}
+			// 	]
+			// },
+			// {
+			// 	type: "paragraph",
+			// 	children: [
+			// 		{ type: "text", value: "Thursday classes: September 18, 25, October 2, 16, 30, November 6, 13, 20, 27, December 4."}
+			// 	],
+			// },
 		],		
 	},
 	{
