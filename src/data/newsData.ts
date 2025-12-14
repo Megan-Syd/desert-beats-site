@@ -30,9 +30,9 @@ const newsData : NewsData = {
         //     ],
         // },
         {
-            header: "No classes November 10 and 17",
+            header: "A gift for the holidays!",
             paragraphs: [
-                "Don't forget! There are no classes scheduled for Mondays November 10 or 17. See the full list of class dates in the FAQ page.",
+                "We're gifting you some bonus classes this week! Come dance with us one last time before the holidays this Monday December 15, and Thursday December 18.",
             ],
         },
         {
