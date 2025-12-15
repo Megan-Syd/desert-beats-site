@@ -2,7 +2,7 @@ import AppAccordion from "@/components/AppAccordion";
 import Card from "@/components/Card";
 import Headline from "@/components/Headline";
 import HeroImage from "@/components/HeroImage";
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent, CardHeader, CardMedia, Container, Grid, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CardContent, CardHeader, CardMedia, Container, Grid, Paper, Typography } from "@mui/material";
 import { Metadata } from "next";
 import Link from "next/link";
 import { MdExpandMore } from "react-icons/md";
@@ -139,14 +139,47 @@ export default function ClassesPage() {
 
 {/* 'registrations open' headline */}
                 <Headline 
-                title={"Registrations are open!"} 
-                subtitle={"Click the link below to sign up"}>
-                    <Link href='/classes/registration' passHref>
+                title={"Registrations for January coming soon"} 
+                subtitle={"Stay tuned for more info!"}>
+                    {/* <Link href='/classes/registration' passHref>
                         <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
                             Register
                         </Button>
-                    </Link>
+                    </Link> */}
                 </Headline>
+
+{/*Google Calendar embedded*/}
+                <Box
+                    id="calendar"
+                    sx={{ 
+                        display: "flex", 
+                        justifyContent: "center",
+                        // alignItems: "center",
+                        width: "100%",
+                        py: 4,
+                    }}
+                >
+                    <Paper
+                        elevation={3}
+                        sx={{ 
+                            p: { xs: 0.5, sm: 2 },
+                            width: "100%",
+                            maxWidth: "900px", // controls max size on big screens
+                            overflow: "hidden",
+                            borderRadius: 2
+                        }}
+                    >
+                    <iframe 
+                        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FRegina&showPrint=0&src=OWI3YzA3MjM1NDNkNDJiOGUzNTNjNzU3MGYxMTU2YThhZDA5NDZlNTQ2ZTBjMDc5NjM4NThiN2Q4NmM4NzU4N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23f4511e&color=%23d50000"
+                        style={{
+                            border: 0,
+                            width: "100%",
+                            height: "600px"
+                        }}
+                        loading="lazy"
+                    />
+                    </Paper>
+                </Box>
             </Container>
         </>
     )
