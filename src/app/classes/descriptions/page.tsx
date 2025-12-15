@@ -170,7 +170,7 @@ export default function ClassesPage() {
                         }}
                     >
                     <iframe 
-                        src="https://calendar.google.com/calendar/embed?src=sydiaha.megan%40gmail.com&ctz=America%2FToronto" 
+                        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FRegina&showPrint=0&src=OWI3YzA3MjM1NDNkNDJiOGUzNTNjNzU3MGYxMTU2YThhZDA5NDZlNTQ2ZTBjMDc5NjM4NThiN2Q4NmM4NzU4N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23f4511e&color=%23d50000"
                         style={{
                             border: 0,
                             width: "100%",
