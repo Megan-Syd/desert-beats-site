@@ -139,13 +139,13 @@ export default function ClassesPage() {
 
 {/* 'registrations open' headline */}
                 <Headline 
-                title={"Registrations for January coming soon"} 
-                subtitle={"Stay tuned for more info!"}>
-                    {/* <Link href='/classes/registration' passHref>
+                title={"Registrations are open!"} 
+                subtitle={"Click below to sign up"}>
+                    <Link href='/classes/registration' passHref>
                         <Button variant="outlined" color="inherit" sx={{ margin: '10px'}}>
                             Register
                         </Button>
-                    </Link> */}
+                    </Link>
                 </Headline>
 
 {/*Google Calendar embedded*/}

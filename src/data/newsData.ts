@@ -29,10 +29,16 @@ const newsData : NewsData = {
         //         "Please note that this Monday, October 20th, the Beginner class with Jodie will be postponed due to an illness. Belly Dance with Melanie will continue as usual!"
         //     ],
         // },
+        // {
+        //     header: "No classes November 10 and 17",
+        //     paragraphs: [
+        //         "Don't forget! There are no classes scheduled for Mondays November 10 or 17. See the full list of class dates in the FAQ page.",
+        //     ],
+        // },
         {
-            header: "A gift for the holidays!",
+            header: "Registration time is here!",
             paragraphs: [
-                "We're gifting you some bonus classes this week! Come dance with us one last time before the holidays this Monday December 15, and Thursday December 18.",
+                "Classes resume for the new year on January 19. Registrations are now open and will be accepted until January 29. Explore the Class Descriptions to find the best class for you!"
             ],
         },
         {
@@ -41,12 +47,6 @@ const newsData : NewsData = {
                 "Thursday classes will begin with Fat Chance Belly Dance® at 7:00, followed by Fusion at 7:45."
             ],
         },
-        // {
-        //     header: "Registration time is here!",
-        //     paragraphs: [
-        //         "Classes begin again mid-September and registration is now open."
-        //     ],
-        // },
         {
             header: "In the community",
             paragraphs: [
