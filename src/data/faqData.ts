@@ -19,7 +19,7 @@ export const faqData : FaqData[] = [
 			{
 				type: "paragraph",
 				children: [
-					{type: "text", value: "We have two sessions per year: one in the fall from September to early December, and another in winter/spring from mid-January to early April. Each session consists of 10 classes. The specific dates of classes for the Fall 2025 session can be found on the "},
+					{type: "text", value: "We have two sessions per year: one in the fall from September to early December, and another in winter/spring from mid-January to early April. Each session consists of 10 classes. The specific dates of classes for the Winter/Spring 2026 session can be found on the "},
 					{type: "link", value: "calendar.", href: "/classes/descriptions#calendar"}
 				],
 			},
@@ -84,7 +84,7 @@ export const faqData : FaqData[] = [
 				children: [
 					{ type: "text", value: "Visit our "},
 					{ type: "link", value: "Registration", href: "/classes/registration"},
-					{ type: "text", value: " page to read about the registration process, then complete the Google form."},
+					{ type: "text", value: " page to read about the registration process, then complete the Google form. Registrations for the Winter/Spring 2026 session are open until January 29, 2026."},
 				],
 			},
 			

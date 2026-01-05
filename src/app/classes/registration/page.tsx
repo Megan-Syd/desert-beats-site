@@ -15,7 +15,7 @@ export default function RegistrationPage() {
             <HeroImage title="Register" backgroundImageUrl="/banner_images/banner08.jpg" backgroundPosition="0 20%" />
 
             <Container maxWidth="md">
-                <Headline title={"Registrations are open!"} subtitle={"Read the important info below, then complete the Registration Forn"}>
+                <Headline title={"Registrations are open!"} subtitle={"Read the important info below, then complete the Registration Form"}>
                     
                 </Headline>
 
@@ -74,7 +74,7 @@ export default function RegistrationPage() {
 
                 <Headline title={""}>
                 <Button 
-                    href='https://docs.google.com/forms/d/e/1FAIpQLScyhHEuL0e7HuBr1QApIdDAsMbItQbm7eu3pStj3SVCrpFweA/viewform?usp=share_link&ouid=100439058037915451782'
+                    href='https://docs.google.com/forms/d/e/1FAIpQLSf5PqLo7yyn6z5TlEDvI89M_SfDvvMThbHVD8ZRGzIt1Xv9ZA/viewform?usp=sharing&ouid=104593421813019049341'
                     target="_blank"
                     rel="noopener noreferrer"
                      variant="outlined" 
