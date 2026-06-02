@@ -23,6 +23,13 @@ export interface NewsSection{
 const newsData : NewsData = {
     title: "What's new at Desert Beats",
     sections: [
+        {
+            header: "Desert Beats Annual Show: Raq and Mingle",
+            paragraphs: [
+                "The Desert Beats Annual presentation is happening this Saturday, June 5 at The Refinery on Dufferin Avenue. Doors open at 7:00pm, show begins at 7:30pm. Get your tickets now at ontheboards.ca. ",
+                "Featuring special guests DancEgypt and Scott's Flyers!"
+            ]
+        },
         // {
         //     header: "Monday's Beginner class postponed!",
         //     paragraphs: [
@@ -36,9 +43,9 @@ const newsData : NewsData = {
         //     ],
         // },
         {
-            header: "Registration time is here!",
+            header: "A gift for the holidays!",
             paragraphs: [
-                "Classes resume for the new year on January 19. Registrations are now open and will be accepted until January 29. Explore the Class Descriptions to find the best class for you!"
+                "We're gifting you some bonus classes this week! Come dance with us one last time before the holidays this Monday December 15, and Thursday December 18.",
             ],
         },
         {
