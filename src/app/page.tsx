@@ -2,7 +2,7 @@ import { Box, Button, CardContent, CardHeader, CardMedia, Container, Divider, Gr
 import HeroImage from "@/components/HeroImage";
 import Card from "@/components/Card";
 import Headline from "@/components/Headline";
-import Link from "next/link";
+import Link from "@mui/material/Link";
 import newsData from "@/data/newsData";
 import { Metadata } from "next";
 
@@ -40,7 +40,11 @@ export default function Home() {
             )}
             {section.paragraphs.map((paragraph, i) => (
               <Typography key={i}>
-                {paragraph}
+                {paragraph.text}
+                {paragraph.link && (
+                <Link href={paragraph.link.url} target="_blank" rel="noreferrer" sx={{ color: "#226C3B", textDecoration: "none"}}>
+                  {paragraph.link.text}
+                  </Link> )}
               </Typography>
             ))}
             {/* <CardMedia 
