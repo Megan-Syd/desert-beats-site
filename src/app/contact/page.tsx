@@ -37,7 +37,7 @@ export default function ContactPage() {
                             <CardContent>
                             <Typography variant="h6" sx={{ padding: 3 }}>
                                 Desert Beats is fortunate to share studio space with <strong>Saskatoon Salsa Dance Co</strong>.<br />
-                                We use two studios within the space: the Big Studio and the Green Studio. <br />
+                                We use two studios within the space: the Blue Studio and the Green Studio. <br />
                                 Find our classes at 96 33rd Street East, Saskatoon SK
                             </Typography>
                             </CardContent>

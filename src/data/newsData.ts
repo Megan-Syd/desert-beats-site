@@ -21,6 +21,12 @@ const newsData : NewsData = {
     title: "What's new at Desert Beats",
     sections: [
         {
+            header: "Fall 2026 Registration coming soon!",
+            paragraphs: [
+                {text: "Go to the Class Descriptions page and check out our offerings for the Fall 2026 season. Classes begin on September 14."}
+            ],
+        },
+        {
             header: "Desert Beats Annual Show: Raq and Mingle",
             paragraphs: [
                 {

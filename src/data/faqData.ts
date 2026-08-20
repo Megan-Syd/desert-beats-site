@@ -43,7 +43,7 @@ export const faqData : FaqData[] = [
 			{
 				type: "paragraph",
 				children: [
-					{type: "text", value: "We have all of our classes at the lovely Saskatoon Salsa Dance Co. studios at 96 33rd Street East. Both studios are upstairs. After you register, we will provide you with the door access code. The big studio (Monday classes) is to the right at the top of the stairs and to get to the green studio (Thursday classes), turn left at the top of the stairs and head to the end of the hallway."}
+					{type: "text", value: "We have all of our classes at the lovely Saskatoon Salsa Dance Co. studios at 96 33rd Street East. Both studios are upstairs. After you register, we will provide you with the door access code. Turn left at the top of the stairs and head to the end of the hallway. Our classes are held in the blue studio (Mondays) and the green studio (Thursdays). If the parking lot is full, please avoid parking on the residential streets. We are welcome to park in the evening at Kavia Auto Body next door."}
 				],
 			},
 		],
@@ -84,7 +84,7 @@ export const faqData : FaqData[] = [
 				children: [
 					{ type: "text", value: "Visit our "},
 					{ type: "link", value: "Registration", href: "/classes/registration"},
-					{ type: "text", value: " page to read about the registration process, then complete the Google form. Registrations for the Winter/Spring 2026 session are open until January 29, 2026."},
+					{ type: "text", value: " page to read about the registration process, then complete the Google form. Registration for Fall 2026 classes will be open until September 24."},
 				],
 			},
 			
