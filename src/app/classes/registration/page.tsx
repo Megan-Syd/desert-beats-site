@@ -74,7 +74,7 @@ export default function RegistrationPage() {
 
                 <Headline title={""}>
                 <Button 
-                    href='https://docs.google.com/forms/d/e/1FAIpQLSf5PqLo7yyn6z5TlEDvI89M_SfDvvMThbHVD8ZRGzIt1Xv9ZA/viewform?usp=sharing&ouid=104593421813019049341'
+                    href='https://docs.google.com/forms/d/e/1FAIpQLSeypqtzyJemsZgUfCsSYO3iI4KSiVSlRG1C2ucxpngk3GtCPQ/viewform?usp=share_link&ouid=104593421813019049341'
                     target="_blank"
                     rel="noopener noreferrer"
                      variant="outlined" 
